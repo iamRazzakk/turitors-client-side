@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "title": "Computer Science 101",
+      "img": "https://i.ibb.co/1KqxVNy/pexels-pixabay-270640.jpg",
+      "rating": 4.5,
+      "price": 49.99,
+      "admissions": 1200
+    },
+    {
+      "id": 2,
+      "title": "Web Development Fundamentals",
+      "img": "https://i.ibb.co/bmwLW5W/pexels-julia-m-cameron-4144923.jpg",
+      "rating": 4.2,
+      "price": 39.95,
+      "admissions": 850
+    },
+    {
+      "id": 3,
+      "title": "Data Science Masterclass",
+      "img": "https://i.ibb.co/WVLNttP/pexels-buro-millennial-1438081.jpg",
+      "rating": 4.8,
+      "price": 69.5,
+      "admissions": 1600
+    },
+    {
+      "id": 4,
+      "title": "Graphic Design Basics",
+      "img": "https://i.ibb.co/589RT3K/pexels-fox-1595385.jpg",
+      "rating": 4.0,
+      "price": 29.75,
+      "admissions": 600
+    },
+    {
+      "id": 5,
+      "title": "Digital Marketing Essentials",
+      "img": "https://i.ibb.co/Qk63gnj/pexels-julia-m-cameron-4145194.jpg",
+      "rating": 4.6,
+      "price": 54.25,
+      "admissions": 1050
+    },
+    {
+      "id": 6,
+      "title": "Introduction to AI and Machine Learning",
+      "img": "https://i.ibb.co/xqFD0mD/pexels-vlada-karpovich-4050287.jpg",
+      "rating": 4.7,
+      "price": 59.5,
+      "admissions": 1300
+    }
+  ]
+  

@@ -1,0 +1,9 @@
+.header-bg {
+    /* background-image: url('../../public/course_bg-1.png'); */
+    background: #f1e7e7;
+    background-size: cover;
+    background-position: center ; 
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 89vh;
+  }

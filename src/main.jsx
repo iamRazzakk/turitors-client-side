@@ -5,17 +5,39 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Main from './Main/Main';
+import SingIn from './Registetion/SingIn';
+import SingUp from './Registetion/SingUp';
+import AuthProvider from './Provider/AuthProvider';
+import AddCourse from './add course/AddCourse';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <Main></Main>,
+    errorElement: <h2>Error</h2>,
+    children: [
+      {
+        path: '/login',
+        element: <SingIn></SingIn>
+      },
+      {
+        path: '/singup',
+        element: <SingUp></SingUp>
+      },
+      {
+        path: '/addCourse',
+        element: <AddCourse></AddCourse>
+      }
+    ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
