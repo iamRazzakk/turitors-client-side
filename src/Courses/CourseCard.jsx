@@ -1,9 +1,8 @@
 import React from 'react';
 
 const CourseCard = ({ courses }) => {
-    console.log(courses); // Log the entire course object
+    // console.log(courses); 
     const { title, img, rating, price, admissions } = courses;
-    console.log(title);
     return (
         <div className="py-5 px-5">
 

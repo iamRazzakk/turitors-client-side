@@ -1,3 +1,4 @@
+import CourseList from "../CourseList/CourseList";
 import Courses from "../Courses/Courses";
 import Feedback from "../Feedback/Feedback";
 import Header from "../Header/Header";
@@ -8,6 +9,7 @@ const Home = () => {
             <Header></Header>
             <Courses></Courses>
             <Feedback></Feedback>
+            <CourseList></CourseList>
         </div>
     );
 };

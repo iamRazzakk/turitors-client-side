@@ -10,6 +10,8 @@ import SingIn from './Registetion/SingIn';
 import SingUp from './Registetion/SingUp';
 import AuthProvider from './Provider/AuthProvider';
 import AddCourse from './add course/AddCourse';
+import CourseList from './CourseList/CourseList';
+import TotalAssainment from './TotalAssainment/TotalAssainment';
 
 
 const router = createBrowserRouter([
@@ -29,7 +31,19 @@ const router = createBrowserRouter([
       {
         path: '/addCourse',
         element: <AddCourse></AddCourse>
+      },
+      {
+        path: '/seeassinment',
+        element: <CourseList></CourseList>
+      },
+      {
+        path:'/createAssainment',
+        element:<TotalAssainment></TotalAssainment>
       }
+      // {
+      //   path: "/createAssainment",
+      //   element: <TotalAssainment></TotalAssainment>
+      // }
     ]
   },
 ]);
