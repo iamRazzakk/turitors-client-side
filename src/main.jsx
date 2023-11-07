@@ -15,6 +15,7 @@ import AssignmintListCategory from './AssignmintListCategory/AssignmintListCateg
 import Home from './Home/Home';
 import AssinmentDetail from './components/Category/AssinmentDetail';
 import TotalAssainmentUpdate from './TotalAssainment/TotalAssainmentUpdate';
+import SubmitedAssignment from './components/SubmitedAssignment/SubmitedAssignment';
 
 const router = createBrowserRouter([
   {
@@ -55,8 +56,12 @@ const router = createBrowserRouter([
         element: <AssinmentDetail></AssinmentDetail>
       },
       {
-        path:"/TotalassinmentUpdate/:id",
+        path: "/TotalassinmentUpdate/:id",
         element: <TotalAssainmentUpdate></TotalAssainmentUpdate>,
+      },
+      {
+        path: '/submitedAssignment',
+        element: <SubmitedAssignment></SubmitedAssignment>
       }
     ]
   },
