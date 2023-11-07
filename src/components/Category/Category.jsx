@@ -2,25 +2,43 @@ import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
 
 const Category = ({ cate }) => {
   const navigate = useNavigate();
   const { user } = useContext(AuthContext)
   const handleSubmit = e => {
-    const form = e.target
-    const pdf = form.dpf.value
-    const textarea = form.textarea.value
-    const email = form.email.value
-    // console.log(object);
+    e.preventDefault();
+    const form = e.target;
+    const pdf = form.dpf.value;
+    const textarea = form.textarea.value;
+    const email = form.email.value;
+
     const formData = {
-      pdf:pdf,
-      textarea:textarea,
-      email:email,
-      url:cate.url,
-      marks:cate.marks,
-      title:cate.title,
-      type:"pending"
-    }
+      pdf: pdf,
+      textarea: textarea,
+      email: email,
+      url: cate.url,
+      marks: cate.marks,
+      title: cate.title,
+      type: "pending",
+    };
+    fetch('http://localhost:5000/submitedAssignment', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData)
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.acknowledged) {
+          toast.success('Take assignment added successfully');
+          document.getElementById("my_modal_3").close();
+        } else {
+          toast.error('Something is missing');
+        }
+      })
   }
 
   const handleDelete = () => {
@@ -100,19 +118,20 @@ const Category = ({ cate }) => {
                         <label className="label">
                           <span className="label-text">PDF Link</span>
                         </label>
-                        <input type="text" name="pdf" placeholder="Enter PDF Link" className="input input-bordered" required />
+                        <input type="text" name="dpf" placeholder="Enter PDF Link" className="input input-bordered" required />
                       </div>
                       <div className="form-control mt-5">
                         <textarea className="textarea" name="textarea" placeholder="Enter your text"></textarea>
                       </div>
                       <div>
-                        <input type="email" defaultValue={`${user.email}`} name="email" id="" />
+                        <input className="m-10" type="email" defaultValue={`${user.email}`} name="email" id="" />
                       </div>
                       <div className="form-control mt-6">
                         <button className="btn btn-primary">Submit</button>
                       </div>
 
                     </form>
+                    <Toaster></Toaster>
                   </div>
                 </dialog>
 
