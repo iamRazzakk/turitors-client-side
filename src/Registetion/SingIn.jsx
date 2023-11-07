@@ -5,11 +5,8 @@ import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../Firebase.config";
-import Navbar from "../Header/Navbar";
-import Footer from "../Footer/Footer";
-
 const SingIn = () => {
-    const { signIn, loginWithGoogle } = useContext(AuthContext)
+     const { loginWithGoogle } = useContext(AuthContext)
     const handleLoginWithGoogle = () => {
         loginWithGoogle(auth, GoogleAuthProvider)
             .then(result => {
@@ -32,7 +29,7 @@ const SingIn = () => {
                 const user = result.user
                 console.log(user);
                 if (user) {
-                    <Navigate to={'/'}></Navigate>
+                   <Navigate to={'/'}></Navigate>
                 }
             })
             .catch(error => {
@@ -41,7 +38,6 @@ const SingIn = () => {
     }
     return (
         <div>
-            <Navbar></Navbar>
             <div className="w-1/2 mx-auto bg-blue-200 p-4 m-4 rounded-lg shadow-lg">
                 <form onSubmit={handleLogin} className="card-body">
                     < div className="form-control" >
@@ -64,7 +60,6 @@ const SingIn = () => {
                     <p className="text-2xl flex gap-4 mx-auto"><FcGoogle onClick={handleLoginWithGoogle} className=""></FcGoogle> <FaGithub className="bg-black rounded-full"></FaGithub></p>
                 </form >
             </div >
-            <Footer></Footer>
         </div>
     );
 };

@@ -1,5 +1,6 @@
-import Footer from "../Footer/Footer";
-import Navbar from "../Header/Navbar";
+
+import toast, { Toaster } from "react-hot-toast";
+
 
 
 const AddCourse = () => {
@@ -12,29 +13,34 @@ const AddCourse = () => {
         const marks = form.marks.value;
         const url = form.url.value
         console.log(title, difficulty, description, marks, url);
+        const addData = {
+            title: title,
+            difficulty: difficulty,
+            description: description,
+            marks: marks,
+            url: url
+        }
         fetch('http://localhost:5000/createAssainment', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                title,
-                difficulty,
-                description,
-                marks,
-                url
-            })
+           
+            body: JSON.stringify(addData)
 
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                if (data.acknowledged) {
+                    toast.success('Assignment added successfully');
+                } else {
+                    toast.error('Something is missing');
+                }
             })
 
     }
     return (
         <div>
-            <Navbar></Navbar>
 
             <div className="bg-gradient-to-r from-[#f1e7e7] text-black to-[#87ceeb]">
                 <h1 className="text-3xl font-bold text-center mt-5 mb-5 text-black">Add Assignment</h1>
@@ -48,9 +54,9 @@ const AddCourse = () => {
                         <div className="flex-1 ml-4">
                             <label >Assignment difficulty level:</label>
                             <select name="difficulty" className="w-full text-white bg-none" id="cars">
-                                <option value="volvo" selected>Easy</option>
-                                <option value="saab" >Medium</option>
-                                <option value="saab" >Hard</option>
+                                <option value="Easy" selected>Easy</option>
+                                <option value="Medium" >Medium</option>
+                                <option value="Hard" >Hard</option>
                             </select>
                         </div>
                     </div>
@@ -74,9 +80,9 @@ const AddCourse = () => {
                     </div>
                     <p className="text-center"><button type="submit" className="btn bg-gradient-to-r from-[#f1e7e7] text-black to-[#89d9f9]">Submit</button></p>
                 </form>
+                <Toaster></Toaster>
 
             </div>
-            <Footer></Footer>
         </div>
     );
 };

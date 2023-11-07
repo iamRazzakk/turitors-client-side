@@ -9,10 +9,12 @@ import Main from './Main/Main';
 import SingIn from './Registetion/SingIn';
 import SingUp from './Registetion/SingUp';
 import AuthProvider from './Provider/AuthProvider';
-import AddCourse from './add course/AddCourse';
-import CourseList from './CourseList/CourseList';
 import TotalAssainment from './TotalAssainment/TotalAssainment';
-
+import AddCourse from './addCourse/AddCourse';
+import AssignmintListCategory from './AssignmintListCategory/AssignmintListCategory';
+import Home from './Home/Home';
+import AssinmentDetail from './components/Category/AssinmentDetail';
+import TotalAssainmentUpdate from './TotalAssainment/TotalAssainmentUpdate';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,10 @@ const router = createBrowserRouter([
     element: <Main></Main>,
     errorElement: <h2>Error</h2>,
     children: [
+      {
+        path: '/',
+        element: <Home></Home>
+      },
       {
         path: '/login',
         element: <SingIn></SingIn>
@@ -33,17 +39,25 @@ const router = createBrowserRouter([
         element: <AddCourse></AddCourse>
       },
       {
-        path: '/seeassinment',
-        element: <CourseList></CourseList>
+        path: '/seeAssinment/:title',
+        // element: <CourseList></CourseList>,
+        element: <AssignmintListCategory></AssignmintListCategory>,
+        loader: ({ params }) => fetch(`http://localhost:5000/createAssainment/${params.title}`)
+
       },
       {
-        path:'/createAssainment',
-        element:<TotalAssainment></TotalAssainment>
+        path: '/createAssainment',
+        element: <TotalAssainment></TotalAssainment>
+      },
+      {
+        // path: '/assignmentDetail/6547d99f60e1314ad78f75ea',
+        path: '/assignmentDetail/:id',
+        element: <AssinmentDetail></AssinmentDetail>
+      },
+      {
+        path:"/TotalassinmentUpdate/:id",
+        element: <TotalAssainmentUpdate></TotalAssainmentUpdate>,
       }
-      // {
-      //   path: "/createAssainment",
-      //   element: <TotalAssainment></TotalAssainment>
-      // }
     ]
   },
 ]);

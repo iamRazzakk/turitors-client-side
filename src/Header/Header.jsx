@@ -1,11 +1,10 @@
-import Navbar from "./Navbar";
+
 import headerImg from '../../public/stressed-person-using-computer-at-desk.png'
 import './bg.css'
 
 const Header = () => {
     return (
         <div>
-            <Navbar></Navbar>
             <div className="flex p-10 header-bg">
                 <div className="flex-1">
                     <h3 className="text-xl mb-4 mt-10">#Improving lives through learning</h3>
