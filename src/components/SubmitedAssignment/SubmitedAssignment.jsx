@@ -6,10 +6,10 @@ const SubmitedAssignment = () => {
         document.getElementById('my_modal_5').close();
     };
     console.log(submittedAssignments);
-    const id = submittedAssignments.id
+    const id = submittedAssignments._id
     console.log(id);
 
-    const handleUpdateSubmitMark = (e,id) => {
+    const handleUpdateSubmitMark = (e) => {
         e.preventDefault();
 
         const form = e.target;
@@ -21,7 +21,7 @@ const SubmitedAssignment = () => {
         };
         // console.log(submittedAssignments.id);
 
-        fetch(`http://localhost:5000/submitedAssignment/${id}`, {
+        fetch(`http://localhost:5000/submitedAssignment/${submittedAssignment._id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
