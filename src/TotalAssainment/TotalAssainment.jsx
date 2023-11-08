@@ -21,24 +21,24 @@ const TotalAssainment = () => {
                         <Loader></Loader>
                     </> : <>
                         {assignments.map(assignment => (
-                            <li key={assignment._id}>
-                                <div className="h-[450px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                              
-                                        <img className="rounded-t-lg h-44 w-full object-cover" src={assignment.url} alt="" />
-                                 
+                            <ul key={assignment._id}>
+                                <div className="h-[450px] mt-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+
+                                    <img className="rounded-t-lg h-44 w-full object-cover" src={assignment.url} alt="" />
+
                                     <div className="p-5 h-20">
                                         <a >
                                             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{assignment.title}</h5>
                                         </a>
                                         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{assignment.description}</p>
                                         <div>
-                                            <Link to={`/assignmentDetail/${assignment._id}`}> 
+                                            <Link to={`/assignmentDetail/${assignment._id}`}>
                                                 <button className="btn btn-outline">See Detail</button>
                                             </Link>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
+                            </ul>
                         ))}
                     </>}
 

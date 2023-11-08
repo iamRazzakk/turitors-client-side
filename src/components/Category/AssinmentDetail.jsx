@@ -1,5 +1,5 @@
 import { data } from 'autoprefixer';
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 const AssinmentDetail = () => {
@@ -7,12 +7,12 @@ const AssinmentDetail = () => {
     const [cate, setCate] = useState(null);
 
     useEffect(() => {
-        // Fetch assignment details using the assignment ID (id)
         fetch(`http://localhost:5000/createAssainment/${id}`)
             .then((response) => response.json())
             .then((data) => setCate(data))
             .catch((error) => console.error('Error fetching assignment data:', error));
     }, [id]);
+    console.log(cate);
 
     if (!cate) {
         return <div className='flex justify-center items-center font-bold text-3xl'>No data Found</div>;
