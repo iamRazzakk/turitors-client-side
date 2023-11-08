@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 const SubmitedAssignment = () => {
     const [submittedAssignments, setSubmittedAssignments] = useState([]);
+    const [seltectedData, setSelectedData] = useState(null)
     const handleCloseModal = () => {
         document.getElementById('my_modal_5').close();
     };
@@ -19,9 +20,9 @@ const SubmitedAssignment = () => {
             marks: marks,
             feedback: feedback,
         };
-        // console.log(submittedAssignments.id);
+        // console.log(submittedAssignments);
 
-        fetch(`http://localhost:5000/submitedAssignment/${submittedAssignment._id}`, {
+        fetch(`http://localhost:5000/submitedAssignment/${seltectedData?._id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -74,7 +75,11 @@ const SubmitedAssignment = () => {
                                 Person : {assignment.email}
                             </p>
 
-                            <button className="btn btn-outline btn-success" onClick={() => document.getElementById('my_modal_5').showModal()}>
+                            <button className="btn btn-outline btn-success" onClick={() => {
+                                document.getElementById('my_modal_5').showModal()
+                                setSelectedData(assignment)
+                            }}>
+
                                 Give Mark
                             </button>
                             <dialog id="my_modal_5" className="modal text-white modal-bottom sm:modal-middle">
@@ -89,8 +94,8 @@ const SubmitedAssignment = () => {
                                         >
                                             Submitted PDF Link:{submittedAssignments.pdf}
                                         </a> <br /> <br />
-                                        <input type="text" name="marks" placeholder="Mark" className="input input-bordered w-full max-w-xs" />
-                                        <textarea className="textarea mt-5" placeholder="Feedback" name="feedback"></textarea>
+                                        <input type="text" defaultValue={seltectedData?.marks} name="marks" placeholder="Mark" className="input input-bordered w-full max-w-xs" />
+                                        <textarea className="textarea mt-5" defaultValue={seltectedData?.feedback} placeholder="Feedback" name="feedback"></textarea>
 
                                         <button className="btn btn-success btn-outline" type="submit">
                                             Submit
