@@ -57,7 +57,8 @@ const SingIn = () => {
                     </div>
                     <h1 className="text-center font-bold">Not a Member<Link className="text-blue-500" to={'/singup'}> Register</Link></h1>
                     <hr className="bg-black" />
-                    <p className="text-2xl flex gap-4 mx-auto"><FcGoogle onClick={handleLoginWithGoogle} className=""></FcGoogle> <FaGithub className="bg-black rounded-full"></FaGithub></p>
+                    <p className="text-2xl flex gap-4 mx-auto"><FcGoogle onClick={handleLoginWithGoogle} className=""></FcGoogle>
+                     <FaGithub className="bg-black rounded-full"></FaGithub></p>
                 </form >
             </div >
         </div>

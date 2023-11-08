@@ -31,7 +31,6 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li><NavLink to='/'>Home</NavLink></li>
-
                     <li><NavLink to='/addCourse'>Add Assignment</NavLink></li>
                     <li><NavLink to='/createAssainment'>Total Assignment</NavLink></li>
                     <li><NavLink to='/submitedAssignment'>Submitted Assignment</NavLink></li>
@@ -40,11 +39,15 @@ const Navbar = () => {
 
             </div>
             <div className="navbar-end">
-                {user?.email ? <><button onClick={handleLogout} className="btn">Logout</button></>
-                    :
-                    <li><NavLink to='/login'>Login</NavLink></li>
-                }
+                {user?.email ? (
+                    <button onClick={handleLogout} className="btn">Logout</button>
+                ) : (
+                    <button className="btn">
+                        <NavLink to="/login">Login</NavLink>
+                    </button>
+                )}
             </div>
+
         </div>
     );
 };
@@ -104,3 +107,15 @@ export default Navbar;
     </div>
 </nav>
 */
+
+
+
+/*
+
+
+
+
+
+
+
+**/

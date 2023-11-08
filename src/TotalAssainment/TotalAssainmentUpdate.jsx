@@ -12,7 +12,7 @@ const TotalAssainmentUpdate = () => {
         fetch(`http://localhost:5000/createAssainment/${id}`)
             .then((response) => response.json())
             .then((data) => {
-                console.log(data); // Log the received data
+                console.log(data); 
                 setAssignment(data);
             })
             .catch((error) => console.error("Error fetching assignment:", error));
