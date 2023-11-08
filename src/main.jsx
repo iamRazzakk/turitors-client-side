@@ -17,6 +17,7 @@ import AssinmentDetail from './components/Category/AssinmentDetail';
 import TotalAssainmentUpdate from './TotalAssainment/TotalAssainmentUpdate';
 import SubmitedAssignment from './components/SubmitedAssignment/SubmitedAssignment';
 import TakeAssignmentWithPdf from './takeassinmentwithpdf/TakeAssignmentWithPdf';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/addCourse',
-        element: <AddCourse></AddCourse>
+        element: <PrivateRoute><AddCourse></AddCourse></PrivateRoute>
       },
       {
         path: '/seeAssinment/:title',
@@ -62,7 +63,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/submitedAssignment',
-        element: <SubmitedAssignment></SubmitedAssignment>
+        element: <PrivateRoute><SubmitedAssignment></SubmitedAssignment></PrivateRoute>
       },
     ]
   },

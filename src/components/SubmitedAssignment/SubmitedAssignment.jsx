@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 const SubmitedAssignment = () => {
     const [submittedAssignments, setSubmittedAssignments] = useState([]);
@@ -32,6 +33,9 @@ const SubmitedAssignment = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                if (data.modifiedCount > 0) {
+                    toast.success("Update complete")
+                }
             })
         console.log('submitted');
     }
@@ -100,6 +104,7 @@ const SubmitedAssignment = () => {
                                         <button className="btn btn-success btn-outline" type="submit">
                                             Submit
                                         </button>
+                                        <Toaster></Toaster>
                                     </form>
                                     <button
                                         className="btn btn-outline md:ml-3 btn-warning"
