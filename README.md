@@ -1,8 +1,12 @@
-# React + Vite
+# Turitors
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+
+## Getting Started
+* when you click in add assignment than it add on mongodb and you can show it on total assignment but carefully when you add i have 4 category you can show it in home page assignment list Math, science, English, Bangla.
+* when you click total assignment than show all assignment and when click view detail you can show the detail.
+* submitted assignment you can show total how you submit assignment and when you add mark and feedback
+

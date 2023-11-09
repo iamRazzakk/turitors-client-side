@@ -6,7 +6,7 @@ const TotalAssainment = () => {
     const [assignments, setAssignments] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/createAssainment')
+        fetch('https://turitors-server-side.vercel.app/createAssainment')
             .then((response) => response.json())
             .then((data) => setAssignments(data))
             .catch((error) => console.error('Error fetching data:', error));

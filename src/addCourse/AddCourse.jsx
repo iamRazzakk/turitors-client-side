@@ -26,7 +26,7 @@ const AddCourse = () => {
             marks: marks,
             url: url,
         }
-        axios.post('http://localhost:5000/createAssainment', addData, {
+        axios.post('https://turitors-server-side.vercel.app/createAssainment', addData, {
             headers: {
                 'Content-Type': 'application/json',
             },

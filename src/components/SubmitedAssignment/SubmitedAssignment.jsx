@@ -24,7 +24,7 @@ const SubmitedAssignment = () => {
         };
         // console.log(submittedAssignments);
 
-        axios.put(`http://localhost:5000/submitedAssignment/${selectedData?._id}`, updateMark, {
+        axios.put(`https://turitors-server-side.vercel.app/submitedAssignment/${selectedData?._id}`, updateMark, {
             headers: {
                 "Content-Type": "application/json",
             },
@@ -42,7 +42,7 @@ const SubmitedAssignment = () => {
     }
 
     useEffect(() => {
-        axios.get('http://localhost:5000/submitedAssignment')
+        axios.get('https://turitors-server-side.vercel.app/submitedAssignment')
             .then((response) => {
                 setSubmittedAssignments(response.data);
             })

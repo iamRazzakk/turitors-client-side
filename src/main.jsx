@@ -18,12 +18,13 @@ import TotalAssainmentUpdate from './TotalAssainment/TotalAssainmentUpdate';
 import SubmitedAssignment from './components/SubmitedAssignment/SubmitedAssignment';
 import TakeAssignmentWithPdf from './takeassinmentwithpdf/TakeAssignmentWithPdf';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import Error from './Error/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    errorElement: <h2>Error</h2>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: '/',
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
       {
         path: '/seeAssinment/:title',
         element: <AssignmintListCategory></AssignmintListCategory>,
-        loader: ({ params }) => fetch(`http://localhost:5000/createAssainment/${params.title}`)
+        loader: ({ params }) => fetch(`https://turitors-server-side.vercel.app/createAssainment/${params.title}`)
 
       },
       {

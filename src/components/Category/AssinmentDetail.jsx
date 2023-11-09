@@ -8,7 +8,7 @@ const AssinmentDetail = () => {
     const [cate, setCate] = useState(null);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/createAssainment/${id}`)
+        axios.get(`https://turitors-server-side.vercel.app/createAssainment/${id}`)
             .then(res => {
                 setCate(res.data);
             })
