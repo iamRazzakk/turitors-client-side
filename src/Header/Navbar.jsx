@@ -31,7 +31,6 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <img className="w-24" src={logo} alt="" />
-                {/* <a className="btn btn-ghost normal-case text-xl">daisyUI</a> */}
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 font-bold">
