@@ -16,7 +16,6 @@ import Home from './Home/Home';
 import AssinmentDetail from './components/Category/AssinmentDetail';
 import TotalAssainmentUpdate from './TotalAssainment/TotalAssainmentUpdate';
 import SubmitedAssignment from './components/SubmitedAssignment/SubmitedAssignment';
-import TakeAssignmentWithPdf from './takeassinmentwithpdf/TakeAssignmentWithPdf';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import Error from './Error/Error';
 
