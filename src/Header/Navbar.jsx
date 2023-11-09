@@ -6,6 +6,7 @@ import { useContext } from "react";
 const Navbar = () => {
     const navigate = useNavigate()
     const { logOut, user } = useContext(AuthContext)
+    // console.log(user);
     const handleLogout = () => {
         logOut()
         navigate('/login')
@@ -39,6 +40,10 @@ const Navbar = () => {
 
             </div>
             <div className="navbar-end">
+                <div className="flex justify-center items-center">
+                    <img className="w-12 h-12 rounded-xl md:ml-3" src={user?.photoURL} alt="" />
+                    <p>{user?.displayName}</p>
+                </div>
                 {user?.email ? (
                     <button onClick={handleLogout} className="btn">Logout</button>
                 ) : (

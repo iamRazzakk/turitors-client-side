@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -23,28 +24,27 @@ const SubmitedAssignment = () => {
         };
         // console.log(submittedAssignments);
 
-        fetch(`http://localhost:5000/submitedAssignment/${seltectedData?._id}`, {
-            method: "PUT",
+        axios.put(`http://localhost:5000/submitedAssignment/${selectedData?._id}`, updateMark, {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(updateMark),
         })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.modifiedCount > 0) {
-                    toast.success("Update complete")
+            .then(res => {
+                console.log(res.data);
+                if (res.data.modifiedCount > 0) {
+                    toast.success("Update complete");
                 }
             })
+            .catch((error) => {
+                console.error(error);
+            });
         console.log('submitted');
     }
 
     useEffect(() => {
-        fetch('http://localhost:5000/submitedAssignment')
-            .then((response) => response.json())
-            .then((data) => {
-                setSubmittedAssignments(data);
+        axios.get('http://localhost:5000/submitedAssignment')
+            .then((response) => {
+                setSubmittedAssignments(response.data);
             })
             .catch((error) => {
                 console.error("Error fetching data:", error);

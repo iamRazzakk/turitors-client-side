@@ -1,14 +1,19 @@
 import { useEffect, useState } from "react";
 import AssinmentCard from "./AssinmentCard";
+import axios from "axios";
 
 const CourseList = () => {
     const [courseData, setCourseData] = useState([]);
 
     useEffect(() => {
 
-        fetch('/Assinment.json')
-            .then(res => res.json())
-            .then(data => setCourseData(data))
+        axios.get('/Assinment.json')
+            .then(res => {
+                setCourseData(res.data);
+            })
+            .catch(error => {
+                console.error(error);
+            });
     }, []);
 
     return (

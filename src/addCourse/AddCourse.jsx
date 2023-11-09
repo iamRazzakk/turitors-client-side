@@ -2,6 +2,7 @@
 import { useContext } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { AuthContext } from "../Provider/AuthProvider";
+import axios from "axios";
 
 
 
@@ -25,23 +26,22 @@ const AddCourse = () => {
             marks: marks,
             url: url,
         }
-        fetch('http://localhost:5000/createAssainment', {
-            method: "POST",
+        axios.post('http://localhost:5000/createAssainment', addData, {
             headers: {
                 'Content-Type': 'application/json',
             },
-
-            body: JSON.stringify(addData)
-
         })
-            .then(res => res.json())
-            .then(data => {
-                if (data.acknowledged) {
+            .then(response => {
+                if (response.data.acknowledged) {
                     toast.success('Assignment added successfully');
                 } else {
                     toast.error('Something is missing');
                 }
             })
+            .catch(error => {
+                console.error('Error:', error);
+                toast.error('An error occurred while adding the assignment');
+            });
 
     }
     return (

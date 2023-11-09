@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
+import axios from "axios";
 
 const Category = ({ cate }) => {
   const navigate = useNavigate();
@@ -23,22 +24,23 @@ const Category = ({ cate }) => {
       title: cate.title,
       type: "pending",
     };
-    fetch('http://localhost:5000/submitedAssignment', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData)
-    })
-      .then(res => res.json())
-      .then(data => {
-        if (data.acknowledged) {
+    axios
+      .post('http://localhost:5000/submitedAssignment', formData, {
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      })
+      .then((response) => {
+        if (response.data.acknowledged) {
           toast.success('Take assignment added successfully');
           document.getElementById("my_modal_3").close();
         } else {
           toast.error('Something is missing');
         }
       })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
   }
 
   const handleDelete = () => {
@@ -51,7 +53,6 @@ const Category = ({ cate }) => {
       cancelButtonText: "No, keep it",
     }).then((result) => {
       if (result.isConfirmed) {
-        // If the user confirms the delete, send a DELETE request to your backend
         fetch(`http://localhost:5000/createAssainment/${cate._id}`, {
           method: "DELETE",
         })
