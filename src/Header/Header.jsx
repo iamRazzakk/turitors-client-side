@@ -5,19 +5,19 @@ import './bg.css'
 const Header = () => {
     return (
         <div>
-            <div className="flex p-10 header-bg">
+            <div className=" lg:flex  p-10 header-bg w-[1280px] mx-auto">
                 <div className="flex-1">
-                    <h3 className="text-xl mb-4 mt-10">#Improving lives through learning</h3>
-                    <h1 className="text-5xl font-bold">Learn Anytime, Anywhere. Accelerate Your Future.
+                    <h3 className="text-sm md:text-xl mb-4 mt-10">#Improving lives through learning</h3>
+                    <h1 className="text-xl md:text-5xl font-bold">Learn Anytime, Anywhere. Accelerate Your Future.
                     </h1>
-                    <p className="text-xl mt-10">We believe everyone has the capacity to be creative. Eduzion is a place where people develop their own potential. </p>
+                    <p className="text-sm md:text-xl mt-10">We believe everyone has the capacity to be creative. Eduzion is a place where people develop their own potential. </p>
                     <div className="flex gap-4 mt-10">
                         <button className="btn btn-outline btn-warning">View Courses</button>
                         <button className="btn btn-outline btn-success">Start Trail</button>
                     </div>
                 </div>
-                <div className="flex-1">
-                    <img className="rounded" src={headerImg} alt="" />
+                <div className="hidden md:block flex-1">
+                    <img className="rounded " src={headerImg} alt="" />
                 </div>
             </div>
         </div>

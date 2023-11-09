@@ -43,7 +43,6 @@ const router = createBrowserRouter([
       },
       {
         path: '/seeAssinment/:title',
-        // element: <CourseList></CourseList>,
         element: <AssignmintListCategory></AssignmintListCategory>,
         loader: ({ params }) => fetch(`http://localhost:5000/createAssainment/${params.title}`)
 
@@ -70,7 +69,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <div className='bg-gradient-to-r from-[#f1e7e7] text-black h-screen to-[#87ceeb]'>
+  <div className='bg-gradient-to-r from-[#f1e7e7] text-black  to-[#87ceeb]'>
     <React.StrictMode>
       <AuthProvider>
         <RouterProvider router={router} />

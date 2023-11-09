@@ -53,19 +53,17 @@ const Category = ({ cate }) => {
       cancelButtonText: "No, keep it",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/createAssainment/${cate._id}`, {
-          method: "DELETE",
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.message === "Category deleted successfully") {
+        axios
+          .delete(`http://localhost:5000/createAssainment/${cate._id}`)
+          .then((response) => {
+            if (response.data.message === "Category deleted successfully") {
               Swal.fire({
                 title: "Success",
                 text: "Category deleted successfully",
                 icon: "success",
               });
               // Optionally, you can navigate or perform other actions after deletion
-            } else if (data.message === "Category not found") {
+            } else if (response.data.message === "Category not found") {
               Swal.fire({
                 title: "Error",
                 text: "Category not found",
@@ -110,7 +108,6 @@ const Category = ({ cate }) => {
                 <dialog id="my_modal_3" className="modal">
                   <div className="modal-box">
                     <form method="dialog">
-                      {/* if there is a button in form, it will close the modal */}
                       <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     </form>
 
