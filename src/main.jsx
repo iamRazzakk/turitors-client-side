@@ -19,6 +19,7 @@ import SubmitedAssignment from './components/SubmitedAssignment/SubmitedAssignme
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import Error from './Error/Error';
 import UpdateAssignment from './components/updateAssignment/UpdateAssignment';
+import { HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([
   {
@@ -75,9 +76,11 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <div className='bg-gradient-to-r from-[#f1e7e7] text-black  to-[#87ceeb]'>
     <React.StrictMode>
-      <AuthProvider>
-        <RouterProvider router={router} />
-      </AuthProvider>
+      <HelmetProvider>
+        <AuthProvider>
+          <RouterProvider router={router} />
+        </AuthProvider>
+      </HelmetProvider>
     </React.StrictMode>
   </div>,
 )

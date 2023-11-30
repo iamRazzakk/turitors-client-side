@@ -3,6 +3,7 @@ import { useContext } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { AuthContext } from "../Provider/AuthProvider";
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -19,7 +20,7 @@ const AddCourse = () => {
         const email = form.email.value
         const dueDate = form.dueDate.value;
         const pdf = form.pdf.value;
-        console.log(title, difficulty, description, marks, url, dueDate,pdf);
+        console.log(title, difficulty, description, marks, url, dueDate, pdf);
         const addData = {
             title: title,
             email: email,
@@ -51,7 +52,9 @@ const AddCourse = () => {
     }
     return (
         <div>
-
+            <Helmet>
+                <title>Turitors || Assignment</title>
+            </Helmet>
             <div className="bg-gradient-to-r from-[#f1e7e7] text-black to-[#87ceeb]">
                 <h1 className="text-3xl font-bold text-center mt-5 mb-5 text-black">Add Assignment</h1>
                 <form onSubmit={handleSubmit} className="card-body text-white">

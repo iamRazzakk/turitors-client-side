@@ -2,6 +2,7 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const SubmitedAssignment = () => {
     const { user } = useContext(AuthContext)
@@ -58,6 +59,9 @@ const SubmitedAssignment = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Turitors || Submitted Assignment</title>
+            </Helmet>
             <h1 className="text-3xl text-center font-bold md:mb-10">Submitted Assignment</h1>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 {
