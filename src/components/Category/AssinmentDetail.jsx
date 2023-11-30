@@ -2,10 +2,12 @@
 // import { useEffect, useState } from 'react';
 // import { useParams } from 'react-router-dom';
 
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
-const AssinmentDetail = ({ assignment }) => {
-    console.log(assignment);
+const AssinmentDetail = () => {
+    const detail = useLoaderData()
+    console.log(detail);
+    // console.log(assignment);
     // const { title, description } = assignment
     // console.log(title,description,"Assignments");
     // const { id } = useParams();

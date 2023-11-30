@@ -45,7 +45,6 @@ const router = createBrowserRouter([
       {
         path: '/seeAssinment/:title',
         element: <AssignmintListCategory></AssignmintListCategory>,
-        // loader: ({ params }) => fetch(`http://localhost:5000/createAssainment/${params.title}`)
         loader: ({ params }) => fetch(`http://localhost:5000/createAssainment/${params.title}`)
       },
       {
@@ -53,9 +52,9 @@ const router = createBrowserRouter([
         element: <PrivateRoute><TotalAssainment></TotalAssainment></PrivateRoute>
       },
       {
-        // path: '/assignmentDetail/6547d99f60e1314ad78f75ea',
         path: '/assignmentDetail/:id',
-        element: <PrivateRoute><AssinmentDetail></AssinmentDetail></PrivateRoute>
+        element: <PrivateRoute><AssinmentDetail></AssinmentDetail></PrivateRoute>,
+        // loader: ({ params }) => fetch(`http://localhost:5000/assignmentDetail/${params.id}`)
       },
       {
         path: "/TotalassinmentUpdate/:id",
