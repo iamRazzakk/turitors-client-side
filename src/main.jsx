@@ -18,6 +18,7 @@ import TotalAssainmentUpdate from './TotalAssainment/TotalAssainmentUpdate';
 import SubmitedAssignment from './components/SubmitedAssignment/SubmitedAssignment';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import Error from './Error/Error';
+import UpdateAssignment from './components/updateAssignment/UpdateAssignment';
 
 const router = createBrowserRouter([
   {
@@ -44,17 +45,17 @@ const router = createBrowserRouter([
       {
         path: '/seeAssinment/:title',
         element: <AssignmintListCategory></AssignmintListCategory>,
-        loader: ({ params }) => fetch(`https://turitors-server-side.vercel.app/createAssainment/${params.title}`)
-
+        // loader: ({ params }) => fetch(`http://localhost:5000/createAssainment/${params.title}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/createAssainment/${params.title}`)
       },
       {
         path: '/createAssainment',
-        element: <TotalAssainment></TotalAssainment>
+        element: <PrivateRoute><TotalAssainment></TotalAssainment></PrivateRoute>
       },
       {
         // path: '/assignmentDetail/6547d99f60e1314ad78f75ea',
         path: '/assignmentDetail/:id',
-        element: <AssinmentDetail></AssinmentDetail>
+        element: <PrivateRoute><AssinmentDetail></AssinmentDetail></PrivateRoute>
       },
       {
         path: "/TotalassinmentUpdate/:id",
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
         path: '/submitedAssignment',
         element: <PrivateRoute><SubmitedAssignment></SubmitedAssignment></PrivateRoute>
       },
+      {
+        path: 'updateAssignment',
+        element: <PrivateRoute><UpdateAssignment></UpdateAssignment></PrivateRoute>
+      }
     ]
   },
 ]);

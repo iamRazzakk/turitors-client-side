@@ -1,60 +1,12 @@
+import { Toaster } from "react-hot-toast";
 
-import { useContext } from "react";
-import toast, { Toaster } from "react-hot-toast";
-import { AuthContext } from "../Provider/AuthProvider";
-import axios from "axios";
-
-
-
-const AddCourse = () => {
-    const { user } = useContext(AuthContext)
-    const handleSubmit = e => {
-        e.preventDefault();
-        const form = e.target;
-        const title = form.title.value;
-        const difficulty = form.difficulty.value;
-        const description = form.description.value
-        const marks = form.marks.value;
-        const url = form.url.value
-        const email = form.email.value
-        const dueDate = form.dueDate.value;
-        const pdf = form.pdf.value;
-        console.log(title, difficulty, description, marks, url, dueDate,pdf);
-        const addData = {
-            title: title,
-            email: email,
-            difficulty: difficulty,
-            description: description,
-            marks: marks,
-            url: url,
-            dueDate: dueDate,
-            status: "pending",
-            pdf: pdf,
-        }
-        axios.post('http://localhost:5000/createAssainment', addData, {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        })
-            .then(response => {
-                if (response.data.acknowledged) {
-                    toast.success('Assignment added successfully');
-                } else {
-                    toast.error('Something is missing');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                toast.error('An error occurred while adding the assignment');
-            });
-
-    }
+const UpdateAssignment = () => {
     return (
         <div>
 
             <div className="bg-gradient-to-r from-[#f1e7e7] text-black to-[#87ceeb]">
-                <h1 className="text-3xl font-bold text-center mt-5 mb-5 text-black">Add Assignment</h1>
-                <form onSubmit={handleSubmit} className="card-body text-white">
+                <h1 className="text-3xl font-bold text-center mt-5 mb-5 text-black">Update</h1>
+                <form className="card-body">
                     <div className="form-control">
                         <div className="flex">
                             <div className="flex-1">
@@ -85,19 +37,13 @@ const AddCourse = () => {
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input type="text" name="email" defaultValue={`${user?.email}`} placeholder="Email" className="input input-bordered" required />
+                        <input type="text" name="email" placeholder="Email" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Marks</span>
                         </label>
                         <input type="text" name="marks" placeholder="Marks" className="input input-bordered" required />
-                    </div>
-                    <div className="form-control flex-1">
-                        <label className="label">
-                            <span className="label-text">PDF URL</span>
-                        </label>
-                        <input type="url" name="pdf" placeholder="PDF Link" className="input input-bordered" required />
                     </div>
 
                     <div className="flex">
@@ -113,7 +59,7 @@ const AddCourse = () => {
                         </div>
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn btn-primary">Add Assignment</button>
+                        <button className="btn btn-primary">Update</button>
                     </div>
                 </form>
                 <Toaster></Toaster>
@@ -123,4 +69,4 @@ const AddCourse = () => {
     );
 };
 
-export default AddCourse;
+export default UpdateAssignment;

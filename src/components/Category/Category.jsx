@@ -25,7 +25,7 @@ const Category = ({ cate }) => {
       type: "pending",
     };
     axios
-      .post('https://turitors-server-side.vercel.app/submitedAssignment', formData, {
+      .post('http://localhost:5000/submitedAssignment', formData, {
         headers: {
           'Content-Type': 'application/json',
         }
@@ -54,7 +54,7 @@ const Category = ({ cate }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`https://turitors-server-side.vercel.app/createAssainment/${cate._id}`)
+          .delete(`http://localhost:5000/createAssainment/${cate._id}`)
           .then((response) => {
             if (response.data.message === "Category deleted successfully") {
               Swal.fire({
