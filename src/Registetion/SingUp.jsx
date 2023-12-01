@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../Firebase.config";
+import { Helmet } from "react-helmet-async";
 
 const SingUp = () => {
     const { loginWithGoogle } = useContext(AuthContext)
@@ -37,6 +38,9 @@ const SingUp = () => {
     }
     return (
         <div className="w-1/2 mx-auto bg-blue-200 p-4 m-4 rounded-lg shadow-lg">
+            <Helmet>
+                <title>Turitors || Sing up Page</title>
+            </Helmet>
             <form onSubmit={handleSubmit} className="card-body">
                 < div className="form-control" >
                     <label className="label">

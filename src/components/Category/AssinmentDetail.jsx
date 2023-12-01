@@ -1,38 +1,35 @@
-// import axios from 'axios';
-// import { useEffect, useState } from 'react';
-// import { useParams } from 'react-router-dom';
+// import { Link, useLoaderData } from "react-router-dom";
 
-import { Link, useLoaderData } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+
 
 const AssinmentDetail = () => {
-    const detail = useLoaderData()
-    console.log(detail);
-    // console.log(assignment);
-    // const { title, description } = assignment
-    // console.log(title,description,"Assignments");
-    // const { id } = useParams();
-    // const [assignment, setAssignment] = useState(assi);
-
-    // useEffect(() => {
-    //     axios.get(`http://localhost:5000/assignmentDetail/${id}`)
-    //         .then(res => {
-    //             setAssignment(res.data);
-    //         })
-    //         .catch(error => {
-    //             console.error(error);
-    //         });
-    // }, [id]);
-
-    // if (!assignment) {
-    //     return <div className='flex justify-center items-center font-bold text-3xl'>No data Found</div>;
-    // }
+    // const data=useLoaderData()
+    const [data, setData] = useState()
+    console.log(data);
+    const { id } = useParams()
+    console.log(id);
+    useEffect(() => {
+        fetch(`http://localhost:5000/createAssainment/${id}`)
+            .then((response) => response.json())
+            .then((data) => setData(data))
+            .catch((error) => console.error("Error fetching data:", error));
+    }, [id]);
 
     return (
-        <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <h1>
-                {assignment?.title}
-            </h1>
-            <img src={assignment?.img} alt="" />
+        <div className="">
+            <div className="card card-side bg-gradient-to-r from-[#f1e7e7] text-black  to-[#87ceeb] shadow-xl">
+                <figure><img src={data?.url} alt="Movie" /></figure>
+                <div className="card-body">
+                    <h2 className="card-title">Title: {data?.title}</h2>
+                    <p>Description: {data?.description}</p>
+                    <p>Mark: {data?.marks}</p>
+                    <div className="card-actions justify-end">
+                        <button className="btn btn-primary">Watch</button>
+                    </div>
+                </div>
+            </div>
             <Link to='/addCourse'>
                 <button>Take Assignment</button>
             </Link>

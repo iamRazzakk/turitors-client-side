@@ -1,16 +1,19 @@
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from 'react-icons/fa';
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../Firebase.config";
+import { Helmet } from "react-helmet-async";
 const SingIn = () => {
-     const { loginWithGoogle } = useContext(AuthContext)
+    const { loginWithGoogle } = useContext(AuthContext)
+    const navigate = useNavigate()
     const handleLoginWithGoogle = () => {
         loginWithGoogle(auth, GoogleAuthProvider)
             .then(result => {
                 const user = result.user
+                navigate('/')
                 console.log(user);
             })
             .catch(error => {
@@ -28,9 +31,7 @@ const SingIn = () => {
             .then(result => {
                 const user = result.user
                 console.log(user);
-                if (user) {
-                   <Navigate to={'/'}></Navigate>
-                }
+                navigate('/')
             })
             .catch(error => {
                 console.log(error);
@@ -38,6 +39,9 @@ const SingIn = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>Turitors || Login Page</title>
+            </Helmet>
             <div className="w-1/2 mx-auto bg-blue-200 p-4 m-4 rounded-lg shadow-lg">
                 <form onSubmit={handleLogin} className="card-body">
                     < div className="form-control" >
@@ -58,7 +62,7 @@ const SingIn = () => {
                     <h1 className="text-center font-bold">Not a Member<Link className="text-blue-500" to={'/singup'}> Register</Link></h1>
                     <hr className="bg-black" />
                     <p className="text-2xl flex gap-4 mx-auto"><FcGoogle onClick={handleLoginWithGoogle} className=""></FcGoogle>
-                     <FaGithub className="bg-black rounded-full"></FaGithub></p>
+                        <FaGithub className="bg-black rounded-full"></FaGithub></p>
                 </form >
             </div >
         </div>

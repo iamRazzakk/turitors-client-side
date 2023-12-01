@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Loader from "../components/shared/Loader/Loader";
 import { Helmet } from "react-helmet-async";
+import Swal from "sweetalert2";
 
 const TotalAssainment = () => {
     const [assignments, setAssignments] = useState([]);
+    console.log(assignments);
     const [difficulty, setDifficulty] = useState(null);
     const [selectedAssignment, setSelectedAssignment] = useState(null);
     const [currentPage, setCurrentPage] = useState(0);
@@ -20,6 +22,22 @@ const TotalAssainment = () => {
     const handleAssingmentSelection = (assignment) => {
         setSelectedAssignment(assignment);
     };
+    const handleDelete = _id => {
+        console.log(_id);
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                
+            }
+        });
+    }
 
     const filteredAssignments = difficulty
         ? assignments.filter((assignment) => assignment.difficulty === difficulty)
@@ -91,8 +109,11 @@ const TotalAssainment = () => {
                                                             View
                                                         </button>
                                                     </Link>
-                                                    <Link to={`/updateAssignment`}>
+                                                    <Link to={`/updateAssignment/${assignment._id}`}>
                                                         <button className="btn btn-outline btn-info md:ml-6">Update</button>
+                                                    </Link>
+                                                    <Link >
+                                                        <button onClick={() => handleDelete(assignment._id)} className="btn btn-outline btn-warning ml-6">Delete</button>
                                                     </Link>
                                                 </div>
                                             </div>
