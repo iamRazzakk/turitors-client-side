@@ -21,6 +21,11 @@ import Error from './Error/Error';
 import UpdateAssignment from './components/updateAssignment/UpdateAssignment';
 import { HelmetProvider } from 'react-helmet-async';
 import MyAssignment from './components/Myassignment/MyAssignment';
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+const queryClient = new QueryClient()
 
 const router = createBrowserRouter([
   {
@@ -82,11 +87,13 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <div className='bg-gradient-to-r from-[#f1e7e7] text-black  to-[#87ceeb]'>
     <React.StrictMode>
-      <HelmetProvider>
-        <AuthProvider>
-          <RouterProvider router={router} />
-        </AuthProvider>
-      </HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <HelmetProvider>
+          <AuthProvider>
+            <RouterProvider router={router} />
+          </AuthProvider>
+        </HelmetProvider>
+      </QueryClientProvider>
     </React.StrictMode>
   </div>,
 )

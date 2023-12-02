@@ -234,13 +234,14 @@ const SubmitedAssignment = () => {
                         <tr key={assignment._id}>
                             <td>{index + 1}</td>
                             <td>{user.displayName}</td>
+                            <td>{user.title}</td>
                             <td>{assignment.marks}</td>
                             <td>
                                 <button
                                     className="btn"
                                     onClick={() => document.getElementById('my_modal_5').showModal()}
                                 >
-                                    {assignment.status}
+                                    Give mark
                                 </button>
                                 <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                                     <form onSubmit={handleSubmit} className="modal-box bg-gradient-to-r from-[#f1e7e7] text-black  to-[#87ceeb]">

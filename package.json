@@ -13,6 +13,7 @@
     "@mui/icons-material": "^5.14.16",
     "@mui/material": "^5.14.17",
     "@react-native-firebase/app": "^18.6.1",
+    "@tanstack/react-query": "^5.12.2",
     "alpinejs": "^3.13.2",
     "axios": "^1.6.1",
     "cors": "^2.8.5",
