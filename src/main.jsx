@@ -20,6 +20,7 @@ import PrivateRoute from './PrivateRoute/PrivateRoute';
 import Error from './Error/Error';
 import UpdateAssignment from './components/updateAssignment/UpdateAssignment';
 import { HelmetProvider } from 'react-helmet-async';
+import MyAssignment from './components/Myassignment/MyAssignment';
 
 const router = createBrowserRouter([
   {
@@ -68,7 +69,11 @@ const router = createBrowserRouter([
       {
         path: '/updateAssignment/:id',
         element: <PrivateRoute><UpdateAssignment></UpdateAssignment></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/createAssainment/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/updateAssignment/${params.id}`)
+      },
+      {
+        path: '/myassignment',
+        element: <MyAssignment></MyAssignment>
       }
     ]
   },

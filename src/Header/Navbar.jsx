@@ -35,9 +35,10 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 font-bold">
                     <li><NavLink to='/'>Home</NavLink></li>
-                    <li><NavLink to='/addCourse'>Add Assignment</NavLink></li>
-                    <li><NavLink to='/createAssainment'>Total Assignment</NavLink></li>
+                    <li><NavLink to='/addCourse'>Create Assignment</NavLink></li>
+                    <li><NavLink to='/createAssainment'>Assignments</NavLink></li>
                     <li><NavLink to='/submitedAssignment'>Submitted Assignment</NavLink></li>
+                    <li><NavLink to='/myassignment'>My Assignment</NavLink></li>
 
                 </ul>
 

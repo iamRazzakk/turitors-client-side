@@ -34,7 +34,21 @@ const TotalAssainment = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                // asdfasd
+                // 
+                fetch(`http://localhost:5000/createAssainment/${_id}`,{
+                    method:"DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your Assignment has been deleted.",
+                                icon: "success"
+                            });
+                        }
+                    })
             }
         });
     }
