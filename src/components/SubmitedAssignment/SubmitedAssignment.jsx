@@ -187,7 +187,7 @@ const SubmitedAssignment = () => {
         fetch('http://localhost:5000/submitedAssignment')
             .then(res => res.json())
             .then(data => setSubmittedAssignment(data))
-            // .then(data => console.log(data))
+        // .then(data => console.log(data))
     }, []);
 
     const handleSubmit = e => {
@@ -200,9 +200,9 @@ const SubmitedAssignment = () => {
             mark: mark,
             feedback: feedback,
         };
-        axios.post('http://localhost:5000/createAssainment', markFeedback, {
+        axios.post('http://localhost:5000/markFeedback', markFeedback, {
             headers: {
-                'Content-Type': 'application/json',
+                'content-type': 'application/json',
             },
         })
             .then(response => {
@@ -233,7 +233,6 @@ const SubmitedAssignment = () => {
                     {submittedAssignment?.map((assignment, index) => (
                         <tr key={assignment._id}>
                             <td>{index + 1}</td>
-                            <td>{assignment.title}</td>
                             <td>{user.displayName}</td>
                             <td>{assignment.marks}</td>
                             <td>
@@ -249,7 +248,7 @@ const SubmitedAssignment = () => {
                                         <p className="py-4">{assignment?.Note}</p>
                                         Mark: <input className="p-4 rounded-lg bg-white text-black" type="number" name="mark" id="" /> <br /> <br />
                                         Feedback: <input className="p-4 rounded-lg bg-white text-black" type="text" name="feedback" id="" /> <br />
-                                        <button type="button" className="btn btn-success" onClick={() => document.getElementById('my_modal_5').close()}>Submit</button>
+                                       <button className="btn btn-outline btn-success">Submit</button>
                                         <div className="modal-action">
                                             <div method="dialog">
                                                 <button type="button" className="btn" onClick={() => document.getElementById('my_modal_5').close()}>Close</button>
