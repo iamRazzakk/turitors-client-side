@@ -25,6 +25,7 @@ const SubmitedAssignment = () => {
         const markFeedback = {
             mark: mark,
             feedback: feedback,
+            status: 60,
         };
         axios.post('http://localhost:5000/markFeedback', markFeedback, {
             headers: {
@@ -60,7 +61,7 @@ const SubmitedAssignment = () => {
                         <tr key={assignment._id}>
                             <td>{index + 1}</td>
                             <td>{user.displayName}</td>
-                            <td>{user.title}</td>
+                            {/* <td>{user.title}</td> */}
                             <td>{assignment.marks}</td>
                             <td>
                                 <button
@@ -75,7 +76,7 @@ const SubmitedAssignment = () => {
                                         <p className="py-4">{assignment?.Note}</p>
                                         Mark: <input className="p-4 rounded-lg bg-white text-black" type="number" name="mark" id="" /> <br /> <br />
                                         Feedback: <input className="p-4 rounded-lg bg-white text-black" type="text" name="feedback" id="" /> <br />
-                                       <button className="btn btn-outline btn-success">Submit</button>
+                                        <button className="btn btn-outline btn-success">Submit</button>
                                         <div className="modal-action">
                                             <div method="dialog">
                                                 <button type="button" className="btn" onClick={() => document.getElementById('my_modal_5').close()}>Close</button>

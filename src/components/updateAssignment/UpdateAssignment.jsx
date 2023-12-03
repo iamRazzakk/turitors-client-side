@@ -19,8 +19,7 @@ const UpdateAssignment = () => {
     const url = form.url.value
     const email = form.email.value
     const dueDate = form.dueDate.value;
-    const pdf = form.pdf.value;
-    console.log(title, difficulty, description, marks, url, dueDate, pdf);
+    console.log(title, difficulty, description, marks, url, dueDate);
     const addData = {
       title: title,
       email: email,
@@ -29,8 +28,7 @@ const UpdateAssignment = () => {
       marks: marks,
       url: url,
       dueDate: dueDate,
-      status: "pending",
-      pdf: pdf,
+      status: 60,
     }
     fetch(`http://localhost:5000/updateAssignment/${_id}`, {
       method: "PUT",
@@ -95,12 +93,6 @@ const UpdateAssignment = () => {
               <span className="label-text">Marks</span>
             </label>
             <input type="text" name="marks" defaultValue={marks} placeholder="Marks" className="input input-bordered" required />
-          </div>
-          <div className="form-control flex-1">
-            <label className="label">
-              <span className="label-text">PDF URL</span>
-            </label>
-            <input type="url" name="pdf" placeholder="PDF Link" className="input input-bordered" required />
           </div>
 
           <div className="flex">

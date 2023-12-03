@@ -23,9 +23,10 @@ const Navbar = () => {
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         <ul className="menu menu-horizontal px-1 font-bold">
                             <li><NavLink to='/'>Home</NavLink></li>
-                            <li><NavLink to='/addCourse'>Add Assignment</NavLink></li>
-                            <li><NavLink to='/createAssainment'>Total Assignment</NavLink></li>
+                            <li><NavLink to='/addCourse'>Create Assignment</NavLink></li>
+                            <li><NavLink to='/createAssainment'>Assignments</NavLink></li>
                             <li><NavLink to='/submitedAssignment'>Submitted Assignment</NavLink></li>
+                            <li><NavLink to='/myassignment'>My Assignment</NavLink></li>
 
                         </ul>
                     </ul>
