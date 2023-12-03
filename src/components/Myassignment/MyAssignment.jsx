@@ -31,9 +31,9 @@ const MyAssignment = () => {
                         {markFeedbacks && markFeedbacks.map((markFeedback, index) => (
                             <tr key={index}>
                                 <th>{index + 1}</th>
-                                <td>{user.displayName}</td>
-                                <td>{markFeedback.mark}</td>
-                                <td>{markFeedback.feedback}</td>
+                                <td>{user?.displayName}</td>
+                                <td>{markFeedback?.mark}</td>
+                                <td>{markFeedback?.feedback}</td>
                             </tr>
                         ))}
                     </tbody>
