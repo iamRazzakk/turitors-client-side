@@ -2,7 +2,6 @@ import img1 from '../../public/alex-suprun-ZHvM3XIOHoE-unsplash.jpg'
 import img2 from '../../public/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg'
 import img3 from '../../public/leilani-angel-K84vnnzxmTQ-unsplash.jpg'
 import img4 from '../../public/nicolas-horn-MTZTGvDsHFY-unsplash.jpg'
-import img5 from '../../public/vicky-hladynets-C8Ta0gwPbQg-unsplash.jpg'
 
 const Feedback = () => {
     return (
