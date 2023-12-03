@@ -7,7 +7,7 @@ const MyAssignment = () => {
     const {user}=useContext(AuthContext)
 
     useEffect(() => {
-        fetch('http://localhost:5000/markFeedback')
+        fetch('https://turitors-server-side.vercel.app/markFeedback')
             .then(res => res.json())
             .then(data => setMarkFeedbacks(data))
             .catch(error => console.error('Error fetching data:', error));

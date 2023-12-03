@@ -12,7 +12,7 @@ const AssinmentDetail = () => {
     const { id } = useParams()
     console.log(id);
     useEffect(() => {
-        fetch(`http://localhost:5000/createAssainment/${id}`)
+        fetch(`https://turitors-server-side.vercel.app/createAssainment/${id}`)
             .then((res) => res.json())
             .then((data) => setData(data))
             // .then((data) => console.log(data))
@@ -27,9 +27,9 @@ const AssinmentDetail = () => {
         const sendPdf = {
             pdf: pdf,
             Note: Note,
-            status: "pending",
+            status: "100",
         };
-        axios.post('http://localhost:5000/submitedAssignment', sendPdf, {
+        axios.post('https://turitors-server-side.vercel.app/submitedAssignment', sendPdf, {
             headers: {
                 'Content-Type': 'application/json',
             },

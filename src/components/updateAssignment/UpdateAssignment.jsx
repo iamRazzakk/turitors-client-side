@@ -30,7 +30,7 @@ const UpdateAssignment = () => {
       dueDate: dueDate,
       status: 60,
     }
-    fetch(`http://localhost:5000/updateAssignment/${_id}`, {
+    fetch(`https://turitors-server-side.vercel.app/updateAssignment/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": 'application/json'

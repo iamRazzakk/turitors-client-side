@@ -52,7 +52,7 @@ const router = createBrowserRouter([
       {
         path: '/seeAssinment/:title',
         element: <AssignmintListCategory></AssignmintListCategory>,
-        loader: ({ params }) => fetch(`http://localhost:5000/createAssainment/${params.title}`)
+        loader: ({ params }) => fetch(`https://turitors-server-side.vercel.app/createAssainment/${params.title}`)
       },
       {
         path: '/createAssainment',
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
       {
         path: '/assignmentDetail/:id',
         element: <PrivateRoute><AssinmentDetail></AssinmentDetail></PrivateRoute>,
-        // loader: ({ params }) => fetch(`http://localhost:5000/assignmentDetail/${params.id}`)
+        // loader: ({ params }) => fetch(`https://turitors-server-side.vercel.app/assignmentDetail/${params.id}`)
       },
       {
         path: "/TotalassinmentUpdate/:id",
@@ -74,11 +74,11 @@ const router = createBrowserRouter([
       {
         path: '/updateAssignment/:id',
         element: <PrivateRoute><UpdateAssignment></UpdateAssignment></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/updateAssignment/${params.id}`)
+        loader: ({ params }) => fetch(`https://turitors-server-side.vercel.app/updateAssignment/${params.id}`)
       },
       {
         path: '/myassignment',
-        element: <MyAssignment></MyAssignment>
+        element: <PrivateRoute><MyAssignment></MyAssignment></PrivateRoute>
       }
     ]
   },

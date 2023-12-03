@@ -9,7 +9,7 @@ const TotalAssainmentUpdate = () => {
 
     useEffect(() => {
         // Fetch the assignment data when the component mounts
-        fetch(`http://localhost:5000/createAssainment/${id}`)
+        fetch(`https://turitors-server-side.vercel.app/createAssainment/${id}`)
             .then((response) => response.json())
             .then((data) => {
                 console.log(data); 
@@ -29,7 +29,7 @@ const TotalAssainmentUpdate = () => {
             marks: form.marks.value,
             url: form.url.value
         }
-        fetch(`http://localhost:5000/createAssainment/${id}`, {
+        fetch(`https://turitors-server-side.vercel.app/createAssainment/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

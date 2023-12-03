@@ -10,7 +10,7 @@ const SubmitedAssignment = () => {
     const { user } = useContext(AuthContext);
 
     useEffect(() => {
-        fetch('http://localhost:5000/submitedAssignment')
+        fetch('https://turitors-server-side.vercel.app/submitedAssignment')
             .then(res => res.json())
             .then(data => setSubmittedAssignment(data))
         // .then(data => console.log(data))
@@ -27,7 +27,7 @@ const SubmitedAssignment = () => {
             feedback: feedback,
             status: 60,
         };
-        axios.post('http://localhost:5000/markFeedback', markFeedback, {
+        axios.post('https://turitors-server-side.vercel.app/markFeedback', markFeedback, {
             headers: {
                 'content-type': 'application/json',
             },
@@ -46,7 +46,7 @@ const SubmitedAssignment = () => {
     };
 
     return (
-        <div>
+        <div className="p-6">
             <table className="table">
                 <thead>
                     <tr>
@@ -62,7 +62,7 @@ const SubmitedAssignment = () => {
                             <td>{index + 1}</td>
                             <td>{user.displayName}</td>
                             {/* <td>{user.title}</td> */}
-                            <td>{assignment.marks}</td>
+                            <td>{assignment.status}</td>
                             <td>
                                 <button
                                     className="btn"
@@ -72,7 +72,7 @@ const SubmitedAssignment = () => {
                                 </button>
                                 <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                                     <form onSubmit={handleSubmit} className="modal-box bg-gradient-to-r from-[#f1e7e7] text-black  to-[#87ceeb]">
-                                        <h3 className="font-bold text-lg">{assignment.pdf}</h3>
+                                        <a target="_blank" className="font-bold text-lg">PDF: {assignment.pdf}</a>
                                         <p className="py-4">{assignment?.Note}</p>
                                         Mark: <input className="p-4 rounded-lg bg-white text-black" type="number" name="mark" id="" /> <br /> <br />
                                         Feedback: <input className="p-4 rounded-lg bg-white text-black" type="text" name="feedback" id="" /> <br />

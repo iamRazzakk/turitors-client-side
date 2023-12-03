@@ -27,7 +27,7 @@ const TotalAssainment = () => {
             confirmButtonText: "Yes, delete it!",
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/createAssainment/${_id}`, {
+                fetch(`https://turitors-server-side.vercel.app/createAssainment/${_id}`, {
                     method: "DELETE",
                 })
                     .then((res) => res.json())
@@ -49,7 +49,7 @@ const TotalAssainment = () => {
     const { data: queriedAssignments,refetch } = useQuery({
         queryKey: 'createAssainment',
         queryFn: () => {
-            return fetch("http://localhost:5000/createAssainment")
+            return fetch("https://turitors-server-side.vercel.app/createAssainment")
                 .then((res) => res.json());
         },
     });
