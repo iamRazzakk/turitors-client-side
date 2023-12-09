@@ -12,5 +12,5 @@
   
 
   # Live link
- (https://turitors.web.app/){:target="_blank"}
+ (https://turitors.web.app/)
  
