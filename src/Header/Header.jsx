@@ -1,12 +1,14 @@
 
 import { Link } from 'react-router-dom';
-import headerImg from '../../public/stressed-person-using-computer-at-desk.png'
+// import headerImg from '../../public/stressed-person-using-computer-at-desk.png'
 import './bg.css'
+import Lottie from "lottie-react";
+import headerImg from "../../public/lotti.json";
 
 const Header = () => {
     return (
         <div>
-            <div className=" lg:flex  p-10 header-bg w-[1280px] mx-auto">
+            <div className=" lg:flex   p-10  mx-auto">
                 <div className="flex-1">
                     <h3 className="text-sm md:text-xl mb-4 mt-10">#Improving lives through learning</h3>
                     <h1 className="text-xl md:text-5xl font-bold">Learn Anytime, Anywhere. Accelerate Your Future.
@@ -22,7 +24,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="hidden md:block flex-1">
-                    <img className="rounded " src={headerImg} alt="" />
+                    <Lottie className='h-[450px] ' animationData={headerImg} loop={true} />;
                 </div>
             </div>
         </div>

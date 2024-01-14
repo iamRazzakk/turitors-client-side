@@ -5,7 +5,7 @@ import img4 from '../../public/nicolas-horn-MTZTGvDsHFY-unsplash.jpg'
 
 const Feedback = () => {
     return (
-        <div className='bg-gradient-to-r from-[#f1e7e7] text-black  to-[#87ceeb]'>
+        <div className=''>
             <div className='text-center mt-10  font-bold'><h3 className='text-xl'>#Testimonial</h3>
                 <h1 className='text-3xl'>What Students Says</h1></div>
             < div className='grid md:grid-cols-2 mt-10 gap-4 lg:grid-cols-4' >

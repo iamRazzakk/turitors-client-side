@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
-import CourseList from "../CourseList/CourseList";
-import Courses from "../Courses/Courses";
 import Feedback from "../Feedback/Feedback";
 import Header from "../Header/Header";
-import Faq from "./FAQ";
+import Community from "./Community";
+import Features from "./Features";
+import Instructors from "./Instructors";
 
 const Home = () => {
     return (
@@ -12,10 +12,10 @@ const Home = () => {
                 <title>Turitors || Home</title>
             </Helmet>
             <Header></Header>
+            <Features></Features>
+            <Community></Community>
             <Feedback></Feedback>
-            <div className="p-20 ">
-                <Faq></Faq>
-            </div>
+            <Instructors></Instructors>
         </div>
     );
 };

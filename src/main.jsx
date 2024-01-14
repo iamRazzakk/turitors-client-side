@@ -85,7 +85,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <div className='bg-gradient-to-r from-[#f1e7e7] text-black  to-[#87ceeb]'>
+  <div className='bg-white lg:w-[1280px] mx-auto px-4'>
     <React.StrictMode>
       <QueryClientProvider client={queryClient}>
         <HelmetProvider>
@@ -95,5 +95,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </HelmetProvider>
       </QueryClientProvider>
     </React.StrictMode>
-  </div>,
+  </div>
 )
