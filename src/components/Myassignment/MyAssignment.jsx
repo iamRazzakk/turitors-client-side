@@ -17,19 +17,19 @@ const MyAssignment = () => {
 
     return (
         <div>
-            <div className="overflow-x-auto">
+            <div className=" md:px-14">
                 <table className="table">
-                    <thead>
+                    <thead className="bg-[#3d90e9] text-white">
                         <tr>
-                            <th></th>
+                            <th>Index</th>
                             <th>Name</th>
                             <th>Mark</th>
                             <th>Feedback</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="border border-[#3d90e9]">
                         {markFeedbacks && markFeedbacks.map((markFeedback, index) => (
-                            <tr key={index}>
+                            <tr className="border border-[#3d90e9]" key={index}>
                                 <th>{index + 1}</th>
                                 <td>{user?.displayName}</td>
                                 <td>{markFeedback?.mark}</td>

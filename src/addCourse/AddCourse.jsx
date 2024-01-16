@@ -49,24 +49,24 @@ const AddCourse = () => {
 
     }
     return (
-        <div>
+        <div className="md:p-14">
             <Helmet>
                 <title>Turitors || Assignment</title>
             </Helmet>
-            <div className="bg-gradient-to-r from-[#f1e7e7] text-black to-[#87ceeb]">
-                <h1 className="text-3xl font-bold text-center mt-5 mb-5 text-black">Add Assignment</h1>
-                <form onSubmit={handleSubmit} className="card-body text-white">
+            <div className="">
+                <h1 className="text-3xl font-bold text-center text-black md:mb-5">Add Assignment</h1>
+                <form onSubmit={handleSubmit} className="card-body  bg-[#3d90e9] rounded-md text-white">
                     <div className="form-control">
-                        <div className="flex">
+                        <div className="flex gap-4">
                             <div className="flex-1">
                                 <label className="label">
-                                    <span className="label-text">Title</span>
+                                    <span className="label-text text-black font-bold">Title</span>
                                 </label>
-                                <input type="text" placeholder="Title" name="title" className="input input-bordered" required />
+                                <input type="text" placeholder="Title" name="title" className="input input-bordered md:w-full bg-white text-black" required />
                             </div>
-                            <div className="flex-1 ml-4">
-                                <label >Assignment difficulty level:</label>
-                                <select name="difficulty" className="w-full text-white bg-none" id="cars">
+                            <div className="flex-1 ">
+                                <label className="text-black font-bold">Assignment difficulty level:</label>
+                                <select name="difficulty" className="w-full rounded-md md:py-3 md:mt-3 mx-auto text-black bg-white" id="cars">
                                     <option value="Easy" selected>Easy</option>
                                     <option value="Medium" >Medium</option>
                                     <option value="Hard" >Hard</option>
@@ -78,37 +78,40 @@ const AddCourse = () => {
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Description</span>
+                            <span className="text-black font-bold">Email</span>
                         </label>
-                        <input type="text" name="description" placeholder="Description" className="input input-bordered" required />
+                        <input type="text" name="email" defaultValue={`${user?.email}`} placeholder="Email" className="input input-bordered md:w-full bg-white text-black" required />
                     </div>
+
+
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Email</span>
+                            <span className="text-black font-bold">Marks</span>
                         </label>
-                        <input type="text" name="email" defaultValue={`${user?.email}`} placeholder="Email" className="input input-bordered" required />
-                    </div>
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Marks</span>
-                        </label>
-                        <input type="text" name="marks" placeholder="Marks" className="input input-bordered" required />
+                        <input type="text" name="marks" placeholder="Marks" className="input input-bordered md:w-full bg-white text-black" required />
                     </div>
 
                     <div className="flex">
                         <div className="form-control flex-1">
                             <label className="label">
-                                <span className="label-text">Photo URL</span>
+                                <span className="text-black font-bold">Photo URL</span>
                             </label>
-                            <input type="url" name="url" placeholder="Photo URL" className="input input-bordered" required />
+                            <input type="url" name="url" placeholder="Photo URL From Imgbb Direct Link" className="input input-bordered md:w-full bg-white text-black" required />
                         </div>
                         <div className="flex-1 ml-4">
-                            <label>Date:</label>
-                            <input type="date" name="dueDate" className="w-full" />
+                            <label className="text-black font-bold">Date:</label>
+                            <input type="date" name="dueDate" className="w-full rounded-md md:py-3 md:mt-3 mx-auto text-black bg-white" />
                         </div>
                     </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="text-black font-bold">Description</span>
+                        </label>
+                        <textarea className="input input-bordered md:w-full bg-white text-black p-3" name="description" id="" cols="30" rows="10" placeholder="Description"></textarea>
+                        {/* <input type="text" name="description" placeholder="Description" className="input input-bordered md:w-full bg-white text-black md:py-10" required /> */}
+                    </div>
                     <div className="form-control mt-6">
-                        <button className="btn btn-primary">Add Assignment</button>
+                        <button className="bg-white text-black md:py-3 font-bold rounded-lg">Add Assignment</button>
                     </div>
                 </form>
                 <Toaster></Toaster>

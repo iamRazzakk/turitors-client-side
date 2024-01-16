@@ -10,8 +10,8 @@ const Instructors = () => {
     return (
         <div>
             <h3 className='text-center font-bold text-xl'>#Instructors</h3>
-            <h1 className='text-center font-bold text-3xl'>Featured Instructors</h1>
-            <div>
+            <h1 className='text-center font-bold text-3xl md:mb-24'>Featured Instructors</h1>
+            <div className='lg:h-[250px]'>
                 <Swiper
                     slidesPerView={4}
                     spaceBetween={30}

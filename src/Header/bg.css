@@ -8,6 +8,13 @@
     height: 89vh;
   }
   .button:hover{
-    background-color: #3b6d90;
+    background-color: white;
+    color: #3d90e9;
+    font-weight: bold;
+    border: 1px solid #3d90e9;
+  }
+  .button2:hover{
+    background-color: #3d90e9;
     color: white;
+    font-weight: bold;
   }

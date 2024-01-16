@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet-async";
-import Feedback from "../Feedback/Feedback";
 import Header from "../Header/Header";
 import Community from "./Community";
 import Features from "./Features";
@@ -14,7 +13,6 @@ const Home = () => {
             <Header></Header>
             <Features></Features>
             <Community></Community>
-            <Feedback></Feedback>
             <Instructors></Instructors>
         </div>
     );

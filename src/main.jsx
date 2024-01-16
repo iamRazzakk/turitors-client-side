@@ -85,7 +85,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <div className='bg-white lg:w-[1280px] mx-auto px-4'>
+  <div className='bg-white lg:w-[1280px] mx-auto px-4 font-Noto'>
     <React.StrictMode>
       <QueryClientProvider client={queryClient}>
         <HelmetProvider>

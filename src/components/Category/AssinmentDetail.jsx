@@ -49,7 +49,7 @@ const AssinmentDetail = () => {
 
     return (
         <div className="">
-            <div className="card card-side bg-gradient-to-r from-[#f1e7e7] text-black  to-[#87ceeb] shadow-xl">
+            <div className="card card-side bg-[#3d90e9] text-white">
                 <figure><img src={data?.url} alt="Movie" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Title: {data?.title}</h2>
@@ -58,15 +58,15 @@ const AssinmentDetail = () => {
                     <p>Mark: {data?.marks}</p>
                     <div className="card-actions justify-end text-white">
                         {/* Open the modal using document.getElementById('ID').showModal() method */}
-                        <button className="btn" onClick={() => document.getElementById('my_modal_5').showModal()}>Take Assignment</button>
+                        <button className="px-10 py-3 rounded-full bg-white text-[#3d90e9] " onClick={() => document.getElementById('my_modal_5').showModal()}>Take Assignment</button>
                         <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle ">
-                            <form onSubmit={handleSubmit} className="modal-box bg-gradient-to-r from-[#f1e7e7] text-black  to-[#87ceeb] shadow-xl">
+                            <form onSubmit={handleSubmit} className="modal-box bg-[#3d90e9] text-white">
                                 PDF Link: <input className="w-full bg-white p-4 rounded-xl" type="text" name="pdf" id="" /><br />
                                 Note:  <input className="w-full bg-white p-4 rounded-xl" type="text" name="Note" id="" />
-                                <button className="btn md:mt-4">Submit</button>
+                                <button className="px-10 py-3 rounded-full bg-white text-[#3d90e9] md:mt-4">Submit</button>
                                 <div className="modal-action">
                                     <form method="dialog">
-                                        <button className="btn">Close</button>
+                                        <button className="px-10 py-3 rounded-full bg-white text-[#3d90e9] md:mt-4">Close</button>
                                     </form>
                                 </div>
                             </form>

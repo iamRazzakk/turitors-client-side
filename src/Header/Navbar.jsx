@@ -12,6 +12,62 @@ const Navbar = () => {
         logOut()
         navigate('/login')
     }
+    const navLink = <>
+        <ul className="bg-white md:flex gap-6 text-[#3d90e9]">
+            <li>
+                <NavLink
+                    to="/"
+                    className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "font-bold" : "font-normal"
+                    }
+                >
+                    Home
+                </NavLink>
+            </li>
+            <li>
+                <NavLink
+                    to="/addCourse"
+                    className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "font-bold" : "font-normal"
+                    }
+                >
+                    Create Assignment
+                </NavLink>
+            </li>
+            <li>
+                <NavLink
+                    to="/createAssainment"
+                    className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "font-bold" : "font-normal"
+                    }
+                >
+                    Assignments
+                </NavLink>
+            </li>
+            <li>
+                <NavLink
+                    to="/submitedAssignment"
+                    className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "font-bold" : "font-normal"
+                    }
+                >
+                    Submitted Assignment
+                </NavLink>
+            </li>
+            <li>
+                <NavLink
+                    to="/myassignment"
+                    className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "font-bold" : "font-normal"
+                    }
+                >
+                    My Assignment
+                </NavLink>
+            </li>
+        </ul>
+
+
+    </>
 
     return (
         <div className="navbar px-5 bg-white text-black  w-full">
@@ -22,25 +78,18 @@ const Navbar = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white text-[#3d90e9] rounded-box w-52">
                         <li className="menu menu-horizontal px-1 font-bold">
-                            <ul className="bg-white text-black">
-                                <li><NavLink to='/'>Home</NavLink></li>
-                                <li><NavLink to='/addCourse'>Create Assignment</NavLink></li>
-                                <li><NavLink to='/createAssainment'>Assignments</NavLink></li>
-                                <li><NavLink to='/submitedAssignment'>Submitted Assignment</NavLink></li>
-                                <li><NavLink to='/myassignment'>My Assignment</NavLink></li>
-                            </ul>
+                            {navLink}
                         </li>
                     </ul>
                 </div>
                 <img className="w-24" src={logo} alt="" />
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="gap-6 bg-white text-[#3d90e9] menu-horizontal px-1 font-bold">
-                    <li><NavLink to='/'>Home</NavLink></li>
-                    <li><NavLink to='/createAssainment'>Assignments</NavLink></li>
-                    <li><NavLink to='/myassignment'>My Assignment</NavLink></li>
-                    <li><NavLink to='/submitedAssignment'>Submitted Assignment</NavLink></li>
-                    <li><NavLink to='/addCourse'>Create Assignment</NavLink></li>
+                <ul className=" bg-white text-[#3d90e9] menu-horizontal px-1 font-bold">
+
+                    {
+                        navLink
+                    }
                 </ul>
             </div>
             <div className="navbar-end">

@@ -19,7 +19,7 @@ const Header = () => {
                             <button className="px-10 py-4 bg-[#3d90e9] text-white rounded-full button">Assignment</button>
                         </Link>
                         <Link to='/createAssainment'>
-                            <button className="px-10 py-4 bg-[#c7faff] text-white rounded-full">Create</button>
+                            <button className="px-10 py-4 button2 btn-outline border text-[#3d90e9] rounded-full">Create</button>
                         </Link>
                     </div>
                 </div>

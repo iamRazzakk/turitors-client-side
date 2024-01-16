@@ -4,7 +4,7 @@ import icon3 from '../../public/icon3.png'
 const Community = () => {
     return (
         <div>
-            <div className="md:flex gap-4">
+            <div className="md:flex gap-4 md:mb-32 md:h-[250px]">
                 <div className="flex-1">
                     <h1 className="text-5xl font-bold">We are Turitor.
                         An online learning community</h1>

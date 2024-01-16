@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { Link } from "react-router-dom";
 import Loader from "../components/shared/Loader/Loader";
 import { Helmet } from "react-helmet-async";
@@ -82,19 +82,19 @@ const TotalAssainment = () => {
                 {/* Difficulty Filter Buttons */}
                 <div className="flex justify-center space-x-4 mt-4">
                     <button
-                        className="btn btn-outline btn-primary"
+                        className="px-10 bg-[#3d90e9] text-white py-2 rounded-full md:ml-4 button"
                         onClick={() => setDifficulty("Easy")}
                     >
                         Easy
                     </button>
                     <button
-                        className="btn btn-outline btn-primary"
+                        className="px-10 bg-[#3d90e9] text-white py-2 rounded-full md:ml-4 button"
                         onClick={() => setDifficulty("Medium")}
                     >
                         Medium
                     </button>
                     <button
-                        className="btn btn-outline btn-primary"
+                        className="px-10 bg-[#3d90e9] text-white py-2 rounded-full md:ml-4 button"
                         onClick={() => setDifficulty("Hard")}
                     >
                         Hard
@@ -113,7 +113,7 @@ const TotalAssainment = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
                                 {currentDisplayedAssignments.map((assignment) => (
                                     <ul key={assignment._id}>
-                                        <div className="h-[450px] mt-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                        <div className="h-[450px] mt-10 text-white bg-[#163558] border border-gray-200 rounded-lg">
                                             <img
                                                 className="rounded-t-lg h-44 w-full object-cover"
                                                 src={assignment?.url}
@@ -135,19 +135,19 @@ const TotalAssainment = () => {
                                                             onClick={() =>
                                                                 handleAssingmentSelection(assignment)
                                                             }
-                                                            className="btn btn-outline btn-success"
+                                                            className="btn rounded-full btn-outline btn-success"
                                                         >
                                                             View
                                                         </button>
                                                     </Link>
                                                     <Link to={`/updateAssignment/${assignment._id}`}>
-                                                        <button className="btn btn-outline btn-info md:ml-6">
+                                                        <button className="btn btn-outline btn-info md:ml-6 rounded-full">
                                                             Update
                                                         </button>
                                                     </Link>
                                                     <button
                                                         onClick={() => handleDelete(assignment._id)}
-                                                        className="btn btn-outline btn-warning ml-6"
+                                                        className="btn btn-outline btn-warning ml-6 rounded-full"
                                                     >
                                                         Delete
                                                     </button>
