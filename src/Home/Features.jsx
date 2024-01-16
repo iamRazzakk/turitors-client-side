@@ -7,7 +7,7 @@ const Features = () => {
         <div className='md:h[500px] md:mb-32'>
             <h3 className='text-center font-bold text-xl'>#Features</h3>
             <h1 className='text-center font-bold text-3xl'>Why Study with Turitor?</h1>
-            <div className='md:flex p-6'>
+            <div className='md:flex p-6 '>
                 <div className='flex p-8'>
                     <div>
                         <img className='md:w-24' src={img} alt="" />

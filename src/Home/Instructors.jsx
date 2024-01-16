@@ -8,10 +8,10 @@ import img2 from '../../public/ins2.jpeg'
 import img3 from '../../public/ins3.jpeg'
 const Instructors = () => {
     return (
-        <div>
+        <div className='md:mb-32'>
             <h3 className='text-center font-bold text-xl'>#Instructors</h3>
-            <h1 className='text-center font-bold text-3xl md:mb-24'>Featured Instructors</h1>
-            <div className='lg:h-[250px]'>
+            <h1 className='text-center font-bold text-3xl'>Featured Instructors</h1>
+            <div className='lg:h-[250px] md:mt-14'>
                 <Swiper
                     slidesPerView={4}
                     spaceBetween={30}
