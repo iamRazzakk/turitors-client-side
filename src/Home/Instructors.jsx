@@ -22,32 +22,32 @@ const Instructors = () => {
                     className="mySwiper"
                 >
                     <SwiperSlide>
-                        <img className='md:w-40 md:h-40 rounded-full mx-auto' src={img} alt="" />
+                        <img className='object-cover md:w-40 md:h-40 rounded-full mx-auto' src={img} alt="" />
                         <h1 className=' text-xl font-bold text-center'>Martin</h1>
                         <h3 className='text-center'>Instructor</h3>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='md:w-40 md:h-40 rounded-full mx-auto' src={img2} alt="" />
+                        <img className='object-cover md:w-40 md:h-40 rounded-full mx-auto' src={img2} alt="" />
                         <h1 className=' text-xl font-bold text-center'>Abidal</h1>
                         <h3 className='text-center'>Instructor</h3>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='md:w-40 md:h-40 rounded-full mx-auto' src={img3} alt="" />
+                        <img className='object-cover md:w-40 md:h-40 rounded-full mx-auto' src={img3} alt="" />
                         <h1 className=' text-xl font-bold text-center'>Yolanda</h1>
                         <h3 className='text-center'>Instructor</h3>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='md:w-40 md:h-40 rounded-full mx-auto' src={img} alt="" />
+                        <img className='object-cover md:w-40 md:h-40 rounded-full mx-auto' src={img} alt="" />
                         <h1 className=' text-xl font-bold text-center'>Martin</h1>
                         <h3 className='text-center'>Instructor</h3>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='md:w-40 md:h-40 rounded-full mx-auto' src={img2} alt="" />
+                        <img className='object-cover md:w-40 md:h-40 rounded-full mx-auto' src={img2} alt="" />
                         <h1 className=' text-xl font-bold text-center'>Abidal</h1>
                         <h3 className='text-center'>Instructor</h3>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='md:w-40 md:h-40 rounded-full mx-auto' src={img3} alt="" />
+                        <img className='object-cover md:w-40 md:h-40 rounded-full mx-auto' src={img3} alt="" />
                         <h1 className=' text-xl font-bold text-center'>Yolanda</h1>
                         <h3 className=''>Instructor</h3>
                     </SwiperSlide>

@@ -16,10 +16,10 @@ const Header = () => {
                     <p className="text-sm md:text-xl mt-10">We believe everyone has the capacity to be creative. Eduzion is a place where people develop their own potential. </p>
                     <div className="flex gap-4 mt-10">
                         <Link to='addCourse'>
-                            <button className="btn btn-outline btn-warning">Assignment</button>
+                            <button className="px-10 py-4 bg-[#3d90e9] text-white rounded-full button">Assignment</button>
                         </Link>
                         <Link to='/createAssainment'>
-                            <button className="btn btn-outline btn-success">Create</button>
+                            <button className="px-10 py-4 bg-[#c7faff] text-white rounded-full">Create</button>
                         </Link>
                     </div>
                 </div>
