@@ -103,7 +103,7 @@ const Navbar = () => {
                 </> : <>
                     <Link to='/login'>
                         {/* <button className="px-10">Login</button> */}
-                        <button className="px-10 bg-[#3d90e9] py-2  rounded-full md:ml-4">Login</button>
+                        <button className="px-10 bg-[#3d90e9] py-2 text-white rounded-full md:ml-4">Login</button>
                     </Link>
                 </>}
             </div>

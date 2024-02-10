@@ -4,7 +4,7 @@ import img2 from '../../public/hello3.jpg'
 
 const Features = () => {
     return (
-        <div className='md:h[500px] md:mb-32'>
+        <div className='md:h[500px] md:mb-32 text-slate-900'>
             <h3 className='text-center font-bold text-xl'>#Features</h3>
             <h1 className='text-center font-bold text-3xl'>Why Study with Turitor?</h1>
             <div className='md:flex p-6 '>

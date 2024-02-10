@@ -1,4 +1,4 @@
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from 'react-icons/fa';
 import { useContext } from "react";
@@ -6,6 +6,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../Firebase.config";
 import { Helmet } from "react-helmet-async";
+import Swal from "sweetalert2";
 const SingIn = () => {
     const { loginWithGoogle } = useContext(AuthContext)
     const navigate = useNavigate()
@@ -13,6 +14,23 @@ const SingIn = () => {
         loginWithGoogle(auth, GoogleAuthProvider)
             .then(result => {
                 const user = result.user
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    background:"3d90e9",
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                    }
+                });
+                Toast.fire({
+                    icon: "success",
+                    title: "Sign in successfully"
+                });
+
                 navigate('/')
                 console.log(user);
             })
@@ -31,6 +49,22 @@ const SingIn = () => {
             .then(result => {
                 const user = result.user
                 console.log(user);
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                    }
+                });
+                Toast.fire({
+                    icon: "success",
+                    title: "Sign in successfully"
+                });
+
                 navigate('/')
             })
             .catch(error => {
@@ -38,11 +72,11 @@ const SingIn = () => {
             })
     }
     return (
-        <div>
+        <div className="px-6">
             <Helmet>
                 <title>Turitors || Login Page</title>
             </Helmet>
-            <div className="w-1/2 mx-auto bg-blue-200 p-4 m-4 rounded-lg shadow-lg">
+            <div className="w-full  md:w-1/2 md:mx-auto bg-blue-200 p-4 m-4 rounded-lg shadow-lg">
                 <form onSubmit={handleLogin} className="card-body">
                     < div className="form-control" >
                         <label className="label">
@@ -61,7 +95,7 @@ const SingIn = () => {
                     </div>
                     <h1 className="text-center font-bold">Not a Member<Link className="text-blue-500" to={'/singup'}> Register</Link></h1>
                     <hr className="bg-black" />
-                    <p className="text-2xl flex gap-4 mx-auto"><FcGoogle onClick={handleLoginWithGoogle} className=""></FcGoogle>
+                    <p className="text-2xl flex gap-4 mx-auto cursor-pointer"><FcGoogle onClick={handleLoginWithGoogle} className=""></FcGoogle>
                         <FaGithub className="bg-black rounded-full"></FaGithub></p>
                 </form >
             </div >

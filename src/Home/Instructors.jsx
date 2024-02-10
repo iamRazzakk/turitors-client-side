@@ -8,7 +8,7 @@ import img2 from '../../public/ins2.jpeg'
 import img3 from '../../public/ins3.jpeg'
 const Instructors = () => {
     return (
-        <div className='md:mb-32'>
+        <div className='md:mb-32 text-slate-900'>
             <h3 className='text-center font-bold text-xl'>#Instructors</h3>
             <h1 className='text-center font-bold text-3xl'>Featured Instructors</h1>
             <div className='lg:h-[250px] md:mt-14'>

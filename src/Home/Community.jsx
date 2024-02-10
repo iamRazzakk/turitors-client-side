@@ -3,10 +3,10 @@ import icon2 from '../../public/icon2.png'
 import icon3 from '../../public/icon3.png'
 const Community = () => {
     return (
-        <div>
+        <div className='text-slate-900'>
             <div className="md:flex gap-4 md:mb-32 md:h-[250px]">
                 <div className="flex-1">
-                    <h1 className="text-5xl font-bold">We are Turitor.
+                    <h1 className="text-3xl text-slate-900 md:text-5xl font-bold">We are Turitor.
                         An online learning community</h1>
                     <p className='border-l-2 border-[#3630c9] ml-9 p-6 md:mt-4'>
                         At Turitor, we believe everyone should have the opportunity to create progress through technology and develop the skills of tomorrow. With assessments, learning paths and courses authored by industry experts.
