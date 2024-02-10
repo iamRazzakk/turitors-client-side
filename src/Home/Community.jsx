@@ -3,7 +3,7 @@ import icon2 from '../../public/icon2.png'
 import icon3 from '../../public/icon3.png'
 const Community = () => {
     return (
-        <div className='text-slate-900'>
+        <div className='text-slate-900 px-4'>
             <div className="md:flex gap-4 md:mb-32 md:h-[250px]">
                 <div className="flex-1">
                     <h1 className="text-3xl text-slate-900 md:text-5xl font-bold">We are Turitor.

@@ -3,6 +3,7 @@ import Header from "../Header/Header";
 import Community from "./Community";
 import Features from "./Features";
 import Instructors from "./Instructors";
+import StudentFeedBack from "./StudentFeedBack";
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Header></Header>
             <Features></Features>
             <Community></Community>
+            <StudentFeedBack></StudentFeedBack>
             <Instructors></Instructors>
         </div>
     );

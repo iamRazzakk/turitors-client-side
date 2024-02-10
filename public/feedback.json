@@ -1,0 +1,27 @@
+[
+    {
+        "student_name": "Emma Johnson",
+        "feedback": "I thoroughly enjoyed the course! The lectures were engaging, and the materials provided were very helpful.",
+        "image_url": "https://i.ibb.co/0Y3F1n4/2-3.jpg"
+    },
+    {
+        "student_name": "Michael Smith",
+        "feedback": "The instructor was fantastic! They explained complex topics in a simple manner, making it easy to understand.the materials provided were very helpful",
+        "image_url": "https://i.ibb.co/JRcMxVr/IMG-20220706-110741-292.jpg"
+    },
+    {
+        "student_name": "Sophia Lee",
+        "feedback": "The course content was relevant and up-to-date. I appreciate the effort put into making the material comprehensive.the materials provided were very helpful",
+        "image_url": "https://i.ibb.co/jbhpGXB/5.webp"
+    },
+    {
+        "student_name": "Ethan Brown",
+        "feedback": "The practical exercises were incredibly beneficial. They helped solidify the concepts learned in the lectures.the materials provided were very helpful",
+        "image_url": "https://i.ibb.co/QpC1Cx0/4.webp"
+    },
+    {
+        "student_name": "Olivia Martinez",
+        "feedback": "The course structure was well-organized, which made it easy to follow along. Overall, a great learning experience! the materials provided were very helpful",
+        "image_url": "https://i.ibb.co/c6v54c4/Office-200.webp"
+    }
+]

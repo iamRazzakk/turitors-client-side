@@ -1,0 +1,8 @@
+.bgHover:hover{
+    background-color: #3d90e9;
+    color: white;
+    border-radius: 8px;
+}
+.imgHover{
+    border-radius: 100%;
+}
