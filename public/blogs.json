@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Top 10 Programming Languages to Learn in 2024",
+    "description": "Discover the top programming languages that are in high demand and will help you advance your career in 2024.",
+    "image": "https://media.istockphoto.com/id/1492566131/photo/portrait-of-happy-black-orthodontist-with-crossed-arms-in-the-office.jpg?s=612x612&w=0&k=20&c=CrgNLK3nEa_zPaOWw00wSbHLiCSV2p1sZpp3GUwbTAc=",
+    "rating": 4.5,
+    "owner": "John Doe"
+  },
+  {
+    "id": 2,
+    "title": "The Importance of STEM Education for Children",
+    "description": "Learn why STEM education is crucial for children's development and how to encourage their interest in science, technology, engineering, and mathematics.",
+    "image": "https://img.freepik.com/premium-photo/smiling-indian-man-guy-suit-businessman-business-assistant-person-office-employee-company-manager_717737-4597.jpg",
+    "rating": 4.2,
+    "owner": "Jane Smith"
+  },
+  {
+    "id": 3,
+    "title": "10 Tips for Effective Online Learning",
+    "description": "Explore practical tips and strategies to enhance your online learning experience and succeed in your courses.",
+    "image": "https://img.freepik.com/premium-photo/planning-office-portrait-happy-man-with-company-mission-goals-startup-management-strategy-professional-employee-business-corporate-person-with-ideas-vision-success-leadership_590464-149943.jpg",
+    "rating": 4.7,
+    "owner": "David Johnson"
+  },
+  {
+    "id": 4,
+    "title": "The Future of Education: Trends to Watch",
+    "description": "Stay ahead of the curve with insights into the latest trends shaping the future of education, from personalized learning to virtual classrooms.",
+    "image": "https://media.istockphoto.com/id/1354898581/photo/shot-of-a-young-businessman-using-a-laptop-in-a-modern-office.jpg?s=612x612&w=0&k=20&c=dDDNcvIoG-4VdO01ZlENqODBoNocT434vIFp0duuTZM=",
+    "rating": 4.4,
+    "owner": "Emily Brown"
+  },
+  {
+    "id": 5,
+    "title": "Exploring the World of Artificial Intelligence",
+    "description": "Dive into the fascinating world of artificial intelligence and its applications in various industries, from healthcare to finance.",
+    "image": "https://media.istockphoto.com/id/1202215286/photo/confident-businessman-working-at-coworking-space.jpg?s=612x612&w=0&k=20&c=4jnES-0Ofs3lOG0jDaauZzVy8LsNj_oOzL-0YpPQLMg=",
+    "rating": 4.8,
+    "owner": "Michael Wilson"
+  },
+  {
+    "id": 6,
+    "title": "The Benefits of Multilingual Education",
+    "description": "Discover the cognitive, social, and cultural benefits of multilingual education and how it can enrich students' learning experiences.",
+    "image": "https://t3.ftcdn.net/jpg/01/91/85/06/360_F_191850653_IkzN9vZTtOtJ8NTKLKOp8PlaY8iCk6Ls.jpg",
+    "rating": 4.6,
+    "owner": "Sarah Martinez"
+  },
+  {
+    "id": 7,
+    "title": "How to Foster Creativity in the Classroom",
+    "description": "Learn effective strategies and techniques for nurturing creativity and innovation in the classroom environment.",
+    "image": "https://storage.googleapis.com/patronage-client-bluebeyond/2020/05/89d5cfc2-what-is-ee-engagement.jpg",
+    "rating": 4.3,
+    "owner": "Christopher Lee"
+  },
+  {
+    "id": 8,
+    "title": "The Power of Project-Based Learning",
+    "description": "Explore the benefits of project-based learning and how it can engage students, promote critical thinking, and develop real-world skills.",
+    "image": "https://freedesignfile.com/upload/2017/10/Beautiful-professional-women-Stock-Photo.jpg",
+    "rating": 4.9,
+    "owner": "Emma Garcia"
+  },
+  {
+    "id": 9,
+    "title": "Effective Strategies for Student Motivation",
+    "description": "Discover practical techniques and approaches to motivate students and enhance their engagement and participation in the learning process.",
+    "image": "https://media.licdn.com/dms/image/D4E12AQGp1SeZ78UZlA/article-cover_image-shrink_600_2000/0/1698178762035?e=2147483647&v=beta&t=FKrRjxqLeTzbjl71giCLoTVzHZhnDZh8viWibfSbfzI",
+    "rating": 4.1,
+    "owner": "Daniel Rodriguez"
+  },
+  {
+    "id": 10,
+    "title": "The Role of Technology in Education",
+    "description": "Learn about the transformative impact of technology in education and how it can revolutionize teaching and learning experiences.",
+    "image": "https://img.lovepik.com/free-png/20211111/lovepik-a-competent-professional-woman-png-image_400850568_wh1200.png",
+    "rating": 4.5,
+    "owner": "Olivia Taylor"
+  }
+]

@@ -10,13 +10,13 @@ const Community = () => {
         easing: 'ease',
         delay: 50,
     });
-    const [isHovered1, setIsHovered1] = useState(false);
-    const [isHovered2, setIsHovered2] = useState(false);
-    const [isHovered3, setIsHovered3] = useState(false);;
+    const [isHovered1, setIsHovered1] = useState(false)
+    const [isHovered2, setIsHovered2] = useState(false)
+    const [isHovered3, setIsHovered3] = useState(false)
     return (
         <div className='text-slate-900 px-4'>
             <div className="md:flex gap-4 md:mb-32 md:h-[250px]">
-                <div data-aos="zoom-in-left" className="flex-1 md:pl-6">
+                <div data-aos="fade-right" className="flex-1 md:pl-6">
                     <h1 className="text-3xl text-slate-900 md:text-5xl font-bold">We are Turitor.
                         An online learning community</h1>
                     <p className='border-l-2 border-[#3630c9] ml-9 p-6 md:mt-4'>

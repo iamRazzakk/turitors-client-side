@@ -26,7 +26,7 @@ const StudentFeedBack = () => {
         <div className="px-10 md:mb-32">
             <h1 className="text-center text-3xl font-bold text-black md:mb-12">#Student Feedback</h1>
             <Swiper data-aos="fade-down-right" className="mySwiper md:h-[350px]">
-                {studentFeedBack.map((feedback, index) => (
+                {studentFeedBack?.map((feedback, index) => (
                     <SwiperSlide key={index} className="bg-[#e1e9fd] rounded-lg">
                         <div className="md:flex justify-evenly items-center md:p-10">
                             <div className="w-2/3 mx-auto md:px-8  text-black">

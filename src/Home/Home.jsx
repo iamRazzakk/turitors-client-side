@@ -4,6 +4,7 @@ import Community from "./Community";
 import Features from "./Features";
 import Instructors from "./Instructors";
 import StudentFeedBack from "./StudentFeedBack";
+import EducationNews from "./EducationNews";
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
             <Community></Community>
             <StudentFeedBack></StudentFeedBack>
             <Instructors></Instructors>
+            <EducationNews></EducationNews>
         </div>
     );
 };
