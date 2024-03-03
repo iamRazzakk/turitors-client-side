@@ -8,17 +8,22 @@ import EducationNews from "./EducationNews";
 
 
 const Home = () => {
+
     return (
         <div>
             <Helmet>
                 <title>Turitors || Home</title>
             </Helmet>
-            <Header></Header>
-            <Features></Features>
-            <Community></Community>
-            <StudentFeedBack></StudentFeedBack>
-            <Instructors></Instructors>
-            <EducationNews></EducationNews>
+            <div>
+                <Header></Header>
+                <Features></Features>
+                <Community></Community>
+                <StudentFeedBack></StudentFeedBack>
+                <Instructors></Instructors>
+                <EducationNews></EducationNews>
+            </div>
+
+
         </div>
     );
 };
