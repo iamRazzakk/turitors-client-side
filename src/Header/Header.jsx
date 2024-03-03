@@ -7,7 +7,7 @@ import headerImg from "../../public/lotti.json";
 
 const Header = () => {
     return (
-        <div>
+        <div className=''>
             <div className=" lg:flex text-slate-900 p-10  mx-auto">
                 <div className="flex-1">
                     <h3 className="text-sm md:text-xl mb-4 mt-10">#Improving lives through learning</h3>
@@ -24,7 +24,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="hidden md:block flex-1">
-                    <Lottie className='h-[450px] ' animationData={headerImg} loop={true} />;
+                    <Lottie className='h-[450px] ' animationData={headerImg} loop={true} />
                 </div>
             </div>
         </div>
