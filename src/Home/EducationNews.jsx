@@ -15,11 +15,11 @@ const EducationNews = () => {
     }, []);
 
     return (
-        <>
+        <div className="p-10">
             <h1 className="text-center font-bold text-3xl text-black mb-6 mt-6 md:mb-12">Find out the latest education news</h1>
             <Swiper
-                slidesPerView={1} 
-                spaceBetween={30} 
+                slidesPerView={1}
+                spaceBetween={30}
                 pagination={{
                     clickable: true,
                 }}
@@ -28,7 +28,7 @@ const EducationNews = () => {
             >
                 {studentFeedBack?.map(feedback => (
                     <SwiperSlide key={feedback.id}>
-                        <div className="  cards md:flex gap-6 md:mb-32 mb-10 bg-[#447ab5] text-white shadow-xl">
+                        <div className="  md:flex gap-6 md:mb-32 mb-10 bg-[#447ab5] text-white shadow-xl">
                             <figure><img className="flex-1 md:h-[280px] object-cover" src={feedback?.image} alt={feedback?.title} /></figure>
                             <div className="flex-1 p-10 ">
                                 <h2 className="card-title">{feedback?.title}</h2>
@@ -42,7 +42,7 @@ const EducationNews = () => {
                     </SwiperSlide>
                 ))}
             </Swiper>
-        </>
+        </div>
     );
 };
 

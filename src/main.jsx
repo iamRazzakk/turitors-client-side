@@ -85,15 +85,15 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <div className='bg-white lg:w-full md:w-full mx-auto font-Noto'>
-    <React.StrictMode>
-      <QueryClientProvider client={queryClient}>
+  <React.StrictMode>
+    <QueryClientProvider client={queryClient}>
+      <div className='w-full bg-white lg:w-full container mx-auto font-Noto p-0'>
         <HelmetProvider>
           <AuthProvider>
             <RouterProvider router={router} />
           </AuthProvider>
         </HelmetProvider>
-      </QueryClientProvider>
-    </React.StrictMode>
-  </div>
+      </div>
+    </QueryClientProvider>
+  </React.StrictMode>
 )

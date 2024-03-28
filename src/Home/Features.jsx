@@ -13,7 +13,7 @@ const Features = () => {
     });
     return (
         <div className='md:h[500px] md:mb-32 text-slate-900'>
-            <h3 data-aos="fade-down" className='text-center font-bold text-xl'>#Features</h3>
+            <h3 data-aos="fade-down" className='text-center font-bold text-xl'>Features</h3>
             <h1 data-aos="fade-up" className='text-center font-bold text-3xl'>Why Study with Turitor?</h1>
             <div  className='md:flex p-6 '>
                 <div data-aos="zoom-in" className='flex p-8 bgHover'>

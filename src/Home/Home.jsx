@@ -8,7 +8,6 @@ import EducationNews from "./EducationNews";
 
 
 const Home = () => {
-
     return (
         <div>
             <Helmet>

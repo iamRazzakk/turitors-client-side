@@ -75,6 +75,7 @@ const SingUp = () => {
             <Helmet>
                 <title>Turitors || Sing up Page</title>
             </Helmet>
+            <h1 className="md:text-2xl text-xl lg:text-3xl text-black text-center font-bold">Sing up Form!</h1>
             <form onSubmit={handleSubmit} className="card-body">
                 < div className="form-control" >
                     <label className="label">

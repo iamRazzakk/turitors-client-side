@@ -19,7 +19,7 @@ const SingIn = () => {
                     position: "top-end",
                     showConfirmButton: false,
                     timer: 3000,
-                    background:"3d90e9",
+                    background: "3d90e9",
                     timerProgressBar: true,
                     didOpen: (toast) => {
                         toast.onmouseenter = Swal.stopTimer;
@@ -77,6 +77,7 @@ const SingIn = () => {
                 <title>Turitors || Login Page</title>
             </Helmet>
             <div className="w-full  md:w-1/2 md:mx-auto bg-blue-200 p-4 m-4 rounded-lg shadow-lg">
+                <h1 className="md:text-2xl text-xl lg:text-3xl text-black text-center font-bold">Login now!</h1>
                 <form onSubmit={handleLogin} className="card-body">
                     < div className="form-control" >
                         <label className="label">
